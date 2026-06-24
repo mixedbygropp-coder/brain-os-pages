@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1404">
+<title>ADHD Brain OS — My Brain's Owner Manual</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500&family=Caveat:wght@400;500&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1404px; height: 1872px; overflow: hidden; background: #F6F3EE; }
+
+.page { width: 1404px; height: 1872px; background: #F6F3EE; position: relative; font-family: 'DM Sans', sans-serif; }
+
+.chapter-tab { position: absolute; left: 0; top: 220px; width: 8px; height: 80px; background: #7B9E87; border-radius: 0 4px 4px 0; }
+.page-num { position: absolute; bottom: 56px; left: 50%; transform: translateX(-50%); font-size: 18px; font-weight: 300; color: #7A8278; letter-spacing: 0.12em; }
+.corner-tl { position: absolute; top: 56px; left: 56px; width: 36px; height: 36px; border-top: 1px solid #DDD8D0; border-left: 1px solid #DDD8D0; }
+.corner-br { position: absolute; bottom: 56px; right: 56px; width: 36px; height: 36px; border-bottom: 1px solid #DDD8D0; border-right: 1px solid #DDD8D0; }
+
+.content { position: absolute; top: 120px; left: 100px; right: 100px; bottom: 100px; }
+
+.eyebrow { font-size: 18px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: #7B9E87; margin-bottom: 16px; }
+.title { font-family: 'Cormorant Garamond', serif; font-size: 76px; font-weight: 300; font-style: italic; color: #1A1F1C; line-height: 1.0; margin-bottom: 12px; }
+.subtitle { font-size: 23px; font-weight: 300; color: #7A8278; margin-bottom: 48px; line-height: 1.5; }
+
+/* Main card */
+.manual-card {
+  background: white; border-radius: 20px; border: 0.5px solid #DDD8D0;
+  padding: 56px 64px; margin-bottom: 24px;
+}
+
+/* Prompt rows */
+.prompt-row {
+  margin-bottom: 38px;
+  position: relative;
+}
+.prompt-row:last-child { margin-bottom: 0; }
+
+.prompt-label {
+  display: flex; align-items: center; gap: 14px;
+  margin-bottom: 12px;
+}
+
+.prompt-icon {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: #EDF3EF; display: flex; align-items: center; justify-content: center;
+  font-size: 18px; flex-shrink: 0;
+}
+
+.prompt-text {
+  font-size: 22px; font-weight: 400; color: #1A1F1C;
+}
+
+.fill-line {
+  height: 1px; background: #DDD8D0;
+  margin-left: 50px; margin-top: 6px;
+  position: relative;
+}
+
+.fill-line::after {
+  content: '';
+  position: absolute; bottom: -10px; left: 0; right: 0;
+  height: 1px; background: #EDF3EF;
+}
+
+/* Two column layout */
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+
+/* Accent bottom box */
+.accent-box {
+  background: #E8DDD0; border-radius: 16px;
+  padding: 28px 36px;
+  display: flex; align-items: center; gap: 20px;
+}
+
+.accent-box-icon { font-size: 36px; flex-shrink: 0; }
+.accent-box-text { font-family: 'Caveat', cursive; font-size: 28px; color: #3D6148; line-height: 1.4; }
+</style>
+</head>
+<body>
+<div class="page" data-document-role="page" data-label="My Brain's Owner Manual">
+  <div class="chapter-tab"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+
+  <div class="content">
+    <div class="eyebrow">Personalize Your Planner</div>
+    <div class="title">My Brain's<br>Owner Manual</div>
+    <div class="subtitle">Fill this in once. Share it with people who support you.<br>Come back to it when you forget what you already know about yourself.</div>
+
+    <div class="manual-card">
+      <div class="prompt-row">
+        <div class="prompt-label">
+          <div class="prompt-icon">⚡</div>
+          <div class="prompt-text">I work best at</div>
+        </div>
+        <div class="fill-line"></div>
+      </div>
+
+      <div class="prompt-row">
+        <div class="prompt-label">
+          <div class="prompt-icon">🌀</div>
+          <div class="prompt-text">My biggest distraction is</div>
+        </div>
+        <div class="fill-line"></div>
+      </div>
+
+      <div class="prompt-row">
+        <div class="prompt-label">
+          <div class="prompt-icon">🌊</div>
+          <div class="prompt-text">I know I'm overwhelmed when</div>
+        </div>
+        <div class="fill-line"></div>
+      </div>
+
+      <div class="prompt-row">
+        <div class="prompt-label">
+          <div class="prompt-icon">🔄</div>
+          <div class="prompt-text">What helps me reset</div>
+        </div>
+        <div class="fill-line"></div>
+      </div>
+
+      <div class="two-col">
+        <div class="prompt-row" style="margin-bottom:0">
+          <div class="prompt-label">
+            <div class="prompt-icon">🔥</div>
+            <div class="prompt-text">My hyperfocus topics</div>
+          </div>
+          <div class="fill-line"></div>
+          <div class="fill-line" style="margin-top:28px"></div>
+        </div>
+
+        <div class="prompt-row" style="margin-bottom:0">
+          <div class="prompt-label">
+            <div class="prompt-icon">⏰</div>
+            <div class="prompt-text">I need reminders for</div>
+          </div>
+          <div class="fill-line"></div>
+          <div class="fill-line" style="margin-top:28px"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="manual-card" style="margin-bottom:24px;padding: 40px 64px;">
+      <div class="two-col">
+        <div class="prompt-row" style="margin-bottom:0">
+          <div class="prompt-label">
+            <div class="prompt-icon">😴</div>
+            <div class="prompt-text">I need ______ hours of sleep</div>
+          </div>
+          <div class="fill-line"></div>
+        </div>
+
+        <div class="prompt-row" style="margin-bottom:0">
+          <div class="prompt-label">
+            <div class="prompt-icon">🧠</div>
+            <div class="prompt-text">I focus best when</div>
+          </div>
+          <div class="fill-line"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accent-box">
+      <div class="accent-box-icon">💌</div>
+      <div class="accent-box-text">Pro tip: Take a photo of this page and save it in your phone. On hard days, reading your own words is grounding.</div>
+    </div>
+  </div>
+
+  <div class="page-num">04</div>
+</div>
+</body>
+</html>
