@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1404">
+<title>ADHD Brain OS — Daily Planning Page</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=Caveat:wght@400;500&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1404px; height: 1872px; overflow: hidden; background: #F6F3EE; }
+.page { width: 1404px; height: 1872px; background: #F6F3EE; position: relative; font-family: 'DM Sans', sans-serif; }
+
+.chapter-tab { position: absolute; left: 0; top: 220px; width: 8px; height: 120px; background: #3D6148; border-radius: 0 4px 4px 0; }
+.page-num { position: absolute; bottom: 44px; left: 50%; transform: translateX(-50%); font-size: 18px; font-weight: 300; color: #7A8278; letter-spacing: 0.12em; }
+.corner-tl { position: absolute; top: 44px; left: 56px; width: 36px; height: 36px; border-top: 1px solid #DDD8D0; border-left: 1px solid #DDD8D0; }
+.corner-br { position: absolute; bottom: 44px; right: 56px; width: 36px; height: 36px; border-bottom: 1px solid #DDD8D0; border-right: 1px solid #DDD8D0; }
+
+/* Full layout — two column */
+.layout { position: absolute; top: 72px; left: 80px; right: 80px; bottom: 72px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+/* ── LEFT COLUMN ── */
+.left-col { display: flex; flex-direction: column; gap: 14px; }
+
+/* Date header */
+.date-header { display: flex; align-items: center; justify-content: space-between; }
+.date-eyebrow { font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #3D6148; }
+.date-field-row { display: flex; align-items: center; gap: 16px; }
+.date-field { display: flex; flex-direction: column; gap: 5px; }
+.date-label { font-size: 11px; font-weight: 300; letter-spacing: 0.1em; text-transform: uppercase; color: #7A8278; }
+.date-line { width: 120px; height: 1px; background: #DDD8D0; }
+
+/* Mood check-in */
+.mood-card { background: white; border: 0.5px solid #DDD8D0; border-radius: 14px; padding: 18px 22px; }
+.micro-label { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #7A8278; margin-bottom: 12px; }
+
+.mood-icons { display: flex; gap: 10px; flex-wrap: wrap; }
+.mood-icon-item { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.mood-emoji { font-size: 26px; line-height: 1; }
+.mood-word { font-size: 10px; font-weight: 300; color: #7A8278; letter-spacing: 0.04em; }
+
+.energy-bar-wrap { margin-top: 12px; display: flex; align-items: center; gap: 10px; }
+.energy-label-s { font-size: 11px; font-weight: 300; color: #7A8278; }
+.energy-segments { display: flex; gap: 5px; flex: 1; }
+.energy-seg { height: 8px; flex: 1; border-radius: 4px; background: #F0EDE8; border: 1px solid #EDF3EF; }
+
+/* Top 3 */
+.top3-card { background: white; border: 0.5px solid #DDD8D0; border-radius: 14px; padding: 18px 22px; }
+.top3-items { display: flex; flex-direction: column; gap: 12px; margin-top: 12px; }
+.top3-item { display: flex; align-items: center; gap: 12px; }
+.top3-badge { width: 28px; height: 28px; border-radius: 50%; background: #EDF3EF; display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 600; color: #3D6148; flex-shrink: 0; }
+.top3-input-line { flex: 1; height: 1px; background: #EDF3EF; }
+
+/* Win statement */
+.win-card { background: #EDF3EF; border-radius: 14px; padding: 16px 22px; display: flex; align-items: center; gap: 12px; }
+.win-icon { font-size: 20px; flex-shrink: 0; }
+.win-content { flex: 1; }
+.win-label { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #3D6148; margin-bottom: 8px; }
+.win-line { height: 1px; background: rgba(61,97,72,0.2); }
+
+/* Focus tools */
+.focus-card { background: white; border: 0.5px solid #DDD8D0; border-radius: 14px; padding: 18px 22px; }
+.focus-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 10px; }
+
+.focus-item { display: flex; flex-direction: column; gap: 6px; }
+.focus-sub-label { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #7A8278; }
+
+.pomodoro-circles { display: flex; gap: 8px; margin-top: 4px; }
+.pom-circle { width: 28px; height: 28px; border-radius: 50%; border: 1.5px solid #DDD8D0; display: flex; align-items: center; justify-content: center; font-size: 14px; }
+
+.body-double-box { display: flex; align-items: center; gap: 10px; margin-top: 4px; }
+.bd-checkbox { width: 20px; height: 20px; border-radius: 4px; border: 1.5px solid #DDD8D0; flex-shrink: 0; }
+.bd-label { font-size: 14px; font-weight: 300; color: #7A8278; }
+
+.timer-line { height: 1px; background: #EDF3EF; margin-top: 6px; }
+
+/* Distraction box */
+.distraction-card { background: #FAE8DC; border-radius: 14px; padding: 16px 22px; }
+.distraction-lines { display: flex; flex-direction: column; gap: 14px; margin-top: 10px; }
+.distraction-line { height: 1px; background: rgba(201,123,82,0.2); }
+
+/* Brain dump */
+.brain-card { background: #E8DDD0; border-radius: 14px; padding: 16px 22px; flex: 1; }
+.brain-lines { display: flex; flex-direction: column; gap: 16px; margin-top: 10px; }
+.brain-line { height: 1px; background: rgba(160,140,120,0.25); }
+
+/* ── RIGHT COLUMN ── */
+.right-col { display: flex; flex-direction: column; gap: 14px; }
+
+/* Time blocks */
+.timeblock-card { background: white; border: 0.5px solid #DDD8D0; border-radius: 14px; padding: 18px 22px; flex: 1; }
+.timeblock-rows { display: flex; flex-direction: column; gap: 0; margin-top: 10px; }
+
+.tb-row { display: flex; align-items: center; gap: 12px; padding: 7px 0; border-bottom: 0.5px solid #F6F3EE; }
+.tb-row:last-child { border-bottom: none; }
+.tb-time { font-size: 12px; font-weight: 500; color: #DDD8D0; width: 44px; flex-shrink: 0; text-align: right; font-family: 'DM Sans', sans-serif; letter-spacing: 0.04em; }
+.tb-block { flex: 1; height: 26px; border-radius: 6px; background: #F6F3EE; }
+.tb-row.priority .tb-block { background: #EDF3EF; border: 1px solid #C5D9CC; }
+.tb-row.focus .tb-block { background: #EEF2FF; border: 1px solid #C7D2FE; }
+.tb-row.rest .tb-block { background: #FAE8DC; border: 1px solid #F0C9B0; }
+
+/* Priority sort */
+.priority-card { background: white; border: 0.5px solid #DDD8D0; border-radius: 14px; padding: 18px 22px; }
+.priority-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-top: 10px; }
+.priority-col { display: flex; flex-direction: column; gap: 6px; }
+.priority-col-label { font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 6px 10px; border-radius: 6px; text-align: center; }
+.prio-must { background: #EDF3EF; color: #3D6148; }
+.prio-should { background: #FAE8DC; color: #7A3A1A; }
+.prio-nice { background: #F6F3EE; color: #7A8278; }
+.priority-line { height: 1px; background: #F0EDE8; }
+
+/* Close-out section */
+.closeout-card { background: #1A1F1C; border-radius: 14px; padding: 20px 22px; }
+.closeout-title { font-family: 'Caveat', cursive; font-size: 24px; color: rgba(246,243,238,0.5); margin-bottom: 14px; }
+.closeout-items { display: flex; flex-direction: column; gap: 14px; }
+.co-item { display: flex; flex-direction: column; gap: 7px; }
+.co-label { font-size: 11px; font-weight: 300; color: rgba(246,243,238,0.4); letter-spacing: 0.08em; }
+.co-line { height: 1px; background: rgba(246,243,238,0.1); }
+.co-line-2 { height: 1px; background: rgba(246,243,238,0.07); }
+</style>
+</head>
+<body>
+<div class="page" data-document-role="page" data-label="Daily Planning Page">
+  <div class="chapter-tab"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+
+  <div class="layout">
+
+    <!-- ── LEFT COLUMN ── -->
+    <div class="left-col">
+
+      <!-- Date header -->
+      <div class="date-header">
+        <div class="date-eyebrow">Daily Focus</div>
+        <div class="date-field-row">
+          <div class="date-field">
+            <div class="date-label">Date</div>
+            <div class="date-line"></div>
+          </div>
+          <div class="date-field">
+            <div class="date-label">Day</div>
+            <div class="date-line" style="width:80px"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mood check-in -->
+      <div class="mood-card">
+        <div class="micro-label">How am I feeling right now</div>
+        <div class="mood-icons">
+          <div class="mood-icon-item"><div class="mood-emoji">😬</div><div class="mood-word">anxious</div></div>
+          <div class="mood-icon-item"><div class="mood-emoji">😴</div><div class="mood-word">tired</div></div>
+          <div class="mood-icon-item"><div class="mood-emoji">😌</div><div class="mood-word">okay</div></div>
+          <div class="mood-icon-item"><div class="mood-emoji">😊</div><div class="mood-word">good</div></div>
+          <div class="mood-icon-item"><div class="mood-emoji">🔥</div><div class="mood-word">fired up</div></div>
+          <div class="mood-icon-item"><div class="mood-emoji">🌀</div><div class="mood-word">scattered</div></div>
+          <div class="mood-icon-item"><div class="mood-emoji">🧠</div><div class="mood-word">focused</div></div>
+        </div>
+        <div class="energy-bar-wrap">
+          <div class="energy-label-s">energy</div>
+          <div class="energy-segments">
+            <div class="energy-seg"></div>
+            <div class="energy-seg"></div>
+            <div class="energy-seg"></div>
+            <div class="energy-seg"></div>
+            <div class="energy-seg"></div>
+          </div>
+          <div class="energy-label-s">1 → 5</div>
+        </div>
+      </div>
+
+      <!-- Top 3 -->
+      <div class="top3-card">
+        <div class="micro-label">Today's top 3 — that's the whole list</div>
+        <div class="top3-items">
+          <div class="top3-item"><div class="top3-badge">①</div><div class="top3-input-line"></div></div>
+          <div class="top3-item"><div class="top3-badge">②</div><div class="top3-input-line"></div></div>
+          <div class="top3-item"><div class="top3-badge">③</div><div class="top3-input-line"></div></div>
+        </div>
+      </div>
+
+      <!-- Win statement -->
+      <div class="win-card">
+        <div class="win-icon">✨</div>
+        <div class="win-content">
+          <div class="win-label">One thing that would make today a win</div>
+          <div class="win-line"></div>
+        </div>
+      </div>
+
+      <!-- Focus tools -->
+      <div class="focus-card">
+        <div class="micro-label">Focus tools</div>
+        <div class="focus-row">
+          <div class="focus-item">
+            <div class="focus-sub-label">🍅 Pomodoros</div>
+            <div class="pomodoro-circles">
+              <div class="pom-circle"></div>
+              <div class="pom-circle"></div>
+              <div class="pom-circle"></div>
+              <div class="pom-circle"></div>
+            </div>
+          </div>
+          <div class="focus-item">
+            <div class="focus-sub-label">👥 Body double</div>
+            <div class="body-double-box">
+              <div class="bd-checkbox"></div>
+              <div class="bd-label">Active today</div>
+            </div>
+          </div>
+          <div class="focus-item">
+            <div class="focus-sub-label">⏰ Set timer for</div>
+            <div class="timer-line"></div>
+            <div class="timer-line"></div>
+          </div>
+          <div class="focus-item">
+            <div class="focus-sub-label">⚡ Hyperfocus check</div>
+            <div class="body-double-box">
+              <div class="bd-checkbox"></div>
+              <div class="bd-label">Timer set?</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Distraction capture -->
+      <div class="distraction-card">
+        <div class="micro-label" style="color:#7A3A1A">🌀 Distraction capture — write it, release it</div>
+        <div class="distraction-lines">
+          <div class="distraction-line"></div>
+          <div class="distraction-line"></div>
+          <div class="distraction-line"></div>
+        </div>
+      </div>
+
+      <!-- Brain dump -->
+      <div class="brain-card">
+        <div class="micro-label" style="color:#5A4A3A">🧠 Brain dump</div>
+        <div class="brain-lines">
+          <div class="brain-line"></div>
+          <div class="brain-line"></div>
+          <div class="brain-line"></div>
+          <div class="brain-line"></div>
+          <div class="brain-line"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ── RIGHT COLUMN ── -->
+    <div class="right-col">
+
+      <!-- Time blocks -->
+      <div class="timeblock-card">
+        <div class="micro-label">Time blocks</div>
+        <div class="timeblock-rows">
+          <div class="tb-row"><div class="tb-time">6am</div><div class="tb-block"></div></div>
+          <div class="tb-row"><div class="tb-time">7am</div><div class="tb-block"></div></div>
+          <div class="tb-row priority"><div class="tb-time">8am</div><div class="tb-block"></div></div>
+          <div class="tb-row priority"><div class="tb-time">9am</div><div class="tb-block"></div></div>
+          <div class="tb-row focus"><div class="tb-time">10am</div><div class="tb-block"></div></div>
+          <div class="tb-row focus"><div class="tb-time">11am</div><div class="tb-block"></div></div>
+          <div class="tb-row rest"><div class="tb-time">12pm</div><div class="tb-block"></div></div>
+          <div class="tb-row"><div class="tb-time">1pm</div><div class="tb-block"></div></div>
+          <div class="tb-row focus"><div class="tb-time">2pm</div><div class="tb-block"></div></div>
+          <div class="tb-row focus"><div class="tb-time">3pm</div><div class="tb-block"></div></div>
+          <div class="tb-row"><div class="tb-time">4pm</div><div class="tb-block"></div></div>
+          <div class="tb-row"><div class="tb-time">5pm</div><div class="tb-block"></div></div>
+          <div class="tb-row rest"><div class="tb-time">6pm</div><div class="tb-block"></div></div>
+          <div class="tb-row"><div class="tb-time">7pm</div><div class="tb-block"></div></div>
+          <div class="tb-row"><div class="tb-time">8pm</div><div class="tb-block"></div></div>
+          <div class="tb-row"><div class="tb-time">9pm</div><div class="tb-block"></div></div>
+          <div class="tb-row"><div class="tb-time">10pm</div><div class="tb-block"></div></div>
+        </div>
+      </div>
+
+      <!-- Priority sort -->
+      <div class="priority-card">
+        <div class="micro-label">Priority sort</div>
+        <div class="priority-grid">
+          <div class="priority-col">
+            <div class="priority-col-label prio-must">Must do</div>
+            <div class="priority-line"></div>
+            <div class="priority-line"></div>
+            <div class="priority-line"></div>
+          </div>
+          <div class="priority-col">
+            <div class="priority-col-label prio-should">Should do</div>
+            <div class="priority-line"></div>
+            <div class="priority-line"></div>
+            <div class="priority-line"></div>
+          </div>
+          <div class="priority-col">
+            <div class="priority-col-label prio-nice">Nice to do</div>
+            <div class="priority-line"></div>
+            <div class="priority-line"></div>
+            <div class="priority-line"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Close-out -->
+      <div class="closeout-card">
+        <div class="closeout-title">end of day close-out ✦ no judgment</div>
+        <div class="closeout-items">
+          <div class="co-item">
+            <div class="co-label">What I actually did today</div>
+            <div class="co-line"></div>
+            <div class="co-line-2"></div>
+          </div>
+          <div class="co-item">
+            <div class="co-label">One thing I'm proud of</div>
+            <div class="co-line"></div>
+            <div class="co-line-2"></div>
+          </div>
+          <div class="co-item">
+            <div class="co-label">Carry forward to tomorrow</div>
+            <div class="co-line"></div>
+            <div class="co-line-2"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="page-num">11</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1404">
+<title>ADHD Brain OS — Monthly Calendar Grid</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=Caveat:wght@400;500&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1404px; height: 1872px; overflow: hidden; background: #F6F3EE; }
+.page { width: 1404px; height: 1872px; background: #F6F3EE; position: relative; font-family: 'DM Sans', sans-serif; }
+
+.chapter-tab { position: absolute; left: 0; top: 220px; width: 8px; height: 80px; background: #C97B52; border-radius: 0 4px 4px 0; }
+.page-num { position: absolute; bottom: 56px; left: 50%; transform: translateX(-50%); font-size: 18px; font-weight: 300; color: #7A8278; letter-spacing: 0.12em; }
+.corner-tl { position: absolute; top: 56px; left: 56px; width: 36px; height: 36px; border-top: 1px solid #DDD8D0; border-left: 1px solid #DDD8D0; }
+.corner-br { position: absolute; bottom: 56px; right: 56px; width: 36px; height: 36px; border-bottom: 1px solid #DDD8D0; border-right: 1px solid #DDD8D0; }
+
+.content { position: absolute; top: 100px; left: 90px; right: 90px; bottom: 90px; display: flex; flex-direction: column; }
+
+/* Header */
+.cal-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 32px; }
+.cal-title { font-family: 'Cormorant Garamond', serif; font-size: 52px; font-weight: 300; font-style: italic; color: #1A1F1C; }
+.cal-note { font-family: 'Caveat', cursive; font-size: 24px; color: #7B9E87; }
+
+/* Day headers */
+.day-headers { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; margin-bottom: 8px; }
+.day-header { text-align: center; font-size: 14px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #7B9E87; padding: 8px 0; }
+.day-header.weekend { color: #C97B52; }
+
+/* Calendar grid */
+.cal-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; flex: 1; }
+
+.day-cell { background: white; border: 0.5px solid #DDD8D0; border-radius: 10px; padding: 10px 12px; display: flex; flex-direction: column; min-height: 210px; }
+.day-cell.weekend { background: #FAF7F2; border-color: #E8DDD0; }
+.day-cell.empty { background: transparent; border-color: transparent; }
+
+.day-num { font-size: 20px; font-weight: 500; color: #DDD8D0; margin-bottom: 8px; line-height: 1; }
+.day-cell.weekend .day-num { color: #E8DDD0; }
+.day-line { height: 1px; background: #F0EDE8; margin-bottom: 10px; }
+.day-line:last-child { margin-bottom: 0; }
+
+/* Notes strip at bottom */
+.notes-strip { margin-top: 16px; background: white; border: 0.5px solid #DDD8D0; border-radius: 12px; padding: 20px 28px; display: flex; align-items: center; gap: 16px; }
+.notes-label { font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #7A8278; white-space: nowrap; }
+.notes-line { flex: 1; height: 1px; background: #EDF3EF; }
+</style>
+</head>
+<body>
+<div class="page" data-document-role="page" data-label="Monthly Calendar Grid">
+  <div class="chapter-tab"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+
+  <div class="content">
+
+    <div class="cal-header">
+      <div class="cal-title">Monthly Calendar</div>
+      <div class="cal-note">undated — fill in as you go</div>
+    </div>
+
+    <!-- Day headers -->
+    <div class="day-headers">
+      <div class="day-header">Mon</div>
+      <div class="day-header">Tue</div>
+      <div class="day-header">Wed</div>
+      <div class="day-header">Thu</div>
+      <div class="day-header">Fri</div>
+      <div class="day-header weekend">Sat</div>
+      <div class="day-header weekend">Sun</div>
+    </div>
+
+    <!-- Calendar grid — 6 rows × 7 days = 42 cells -->
+    <div class="cal-grid">
+      <!-- Row 1 -->
+      <div class="day-cell"><div class="day-num">1</div><div class="day-line"></div><div class="day-line"></div></div>
+      <div class="day-cell"><div class="day-num">2</div><div class="day-line"></div><div class="day-line"></div></div>
+      <div class="day-cell"><div class="day-num">3</div><div class="day-line"></div><div class="day-line"></div></div>
+      <div class="day-cell"><div class="day-num">4</div><div class="day-line"></div><div class="day-line"></div></div>
+      <div class="day-cell"><div class="day-num">5</div><div class="day-line"></div><div class="day-line"></div></div>
+      <div class="day-cell weekend"><div class="day-num">6</div><div class="day-line"></div><div class="day-line"></div></div>
+      <div class="day-cell weekend"><div class="day-num">7</div><div class="day-line"></div><div class="day-line"></div></div>
+      <!-- Row 2 -->
+      <div class="day-cell"><div class="day-num">8</div><div class="day-line"></div><div class="day-line"></div></div>
+      <div class="day-cell"><div class="day-num">9</div><div class="day-line"></div><div class="day-line"></div></div>
+      <div class="day-cell"><div class="day-num">10</div><div class="day-line"></div><div class="day-line"></div></div>
+      <div class="day-cell"><div class="day-num">11</div><div class="day-line"></div><div class="day-line"></div></div>
+      <div class="day-cell"><div class="day-num">12</div><div class="day-line"></div><div class="day-line"></div></div>
+      <div class="day-cell weekend"><div class="day-num">13</div><div class="day-line"></div><div class="day-line"></div></div>
+      <div class="day-cell weekend"><div class="day-num">14</div><div class="day-line"></div><div class="day-line"></div></div>
+      <!-- Row 3 -->
+      <div class="day-cell"><div class="day-num">15</div><div class="day-line"></div><div class="day-line"></div></div>
+      <div class="day-cell"><div class="day-num">16</div><div class="day-line"></div><div class="day-line"></div></div>
+      <div class="day-cell"><div class="day-num">17</div><div class="day-line"></div><div class="day-line"></div></div>
+      <div class="day-cell"><div class="day-num">18</div><div class="day-line"></div><div class="day-line"></div></div>
+      <div class="day-cell"><div class="day-num">19</div><div class="day-line"></div><div class="day-line"></div></div>
+      <div class="day-cell weekend"><div class="day-num">20</div><div class="day-line"></div><div class="day-line"></div></div>
+      <div class="day-cell weekend"><div class="day-num">21</div><div class="day-line"></div><div class="day-line"></div></div>
+      <!-- Row 4 -->
+      <div class="day-cell"><div class="day-num">22</div><div class="day-line"></div><div class="day-line"></div></div>
+      <div class="day-cell"><div class="day-num">23</div><div class="day-line"></div><div class="day-line"></div></div>
+      <div class="day-cell"><div class="day-num">24</div><div class="day-line"></div><div class="day-line"></div></div>
+      <div class="day-cell"><div class="day-num">25</div><div class="day-line"></div><div class="day-line"></div></div>
+      <div class="day-cell"><div class="day-num">26</div><div class="day-line"></div><div class="day-line"></div></div>
+      <div class="day-cell weekend"><div class="day-num">27</div><div class="day-line"></div><div class="day-line"></div></div>
+      <div class="day-cell weekend"><div class="day-num">28</div><div class="day-line"></div><div class="day-line"></div></div>
+      <!-- Row 5 -->
+      <div class="day-cell"><div class="day-num">29</div><div class="day-line"></div><div class="day-line"></div></div>
+      <div class="day-cell"><div class="day-num">30</div><div class="day-line"></div><div class="day-line"></div></div>
+      <div class="day-cell"><div class="day-num">31</div><div class="day-line"></div><div class="day-line"></div></div>
+      <div class="day-cell empty"></div>
+      <div class="day-cell empty"></div>
+      <div class="day-cell empty"></div>
+      <div class="day-cell empty"></div>
+    </div>
+
+    <!-- Notes strip -->
+    <div class="notes-strip">
+      <div class="notes-label">Notes</div>
+      <div class="notes-line"></div>
+      <div class="notes-line"></div>
+    </div>
+
+  </div>
+
+  <div class="page-num">08</div>
+</div>
+</body>
+</html>

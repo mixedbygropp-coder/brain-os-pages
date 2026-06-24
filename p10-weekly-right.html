@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1404">
+<title>ADHD Brain OS — Weekly Spread Right</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=Caveat:wght@400;500&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1404px; height: 1872px; overflow: hidden; background: #F6F3EE; }
+.page { width: 1404px; height: 1872px; background: #F6F3EE; position: relative; font-family: 'DM Sans', sans-serif; }
+
+.chapter-tab { position: absolute; left: 0; top: 220px; width: 8px; height: 80px; background: #7B9E87; border-radius: 0 4px 4px 0; }
+.page-num { position: absolute; bottom: 56px; left: 50%; transform: translateX(-50%); font-size: 18px; font-weight: 300; color: #7A8278; letter-spacing: 0.12em; }
+.corner-tl { position: absolute; top: 56px; left: 56px; width: 36px; height: 36px; border-top: 1px solid #DDD8D0; border-left: 1px solid #DDD8D0; }
+.corner-br { position: absolute; bottom: 56px; right: 56px; width: 36px; height: 36px; border-bottom: 1px solid #DDD8D0; border-right: 1px solid #DDD8D0; }
+
+.content { position: absolute; top: 100px; left: 90px; right: 90px; bottom: 100px; display: flex; flex-direction: column; gap: 20px; }
+
+.section-label { font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #7B9E87; margin-bottom: 14px; }
+
+/* Habit tracker */
+.habit-card { background: white; border: 0.5px solid #DDD8D0; border-radius: 16px; padding: 28px 32px; }
+
+.habit-grid-header { display: grid; grid-template-columns: 1fr repeat(7, 44px); gap: 0; margin-bottom: 10px; }
+.habit-day-head { text-align: center; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #7B9E87; }
+.habit-day-head.wknd { color: #C97B52; }
+
+.habit-row { display: grid; grid-template-columns: 1fr repeat(7, 44px); gap: 0; align-items: center; margin-bottom: 14px; }
+.habit-row:last-child { margin-bottom: 0; }
+.habit-name { display: flex; align-items: center; gap: 8px; padding-right: 12px; }
+.habit-dot { width: 8px; height: 8px; border-radius: 50%; background: #EDF3EF; flex-shrink: 0; }
+.habit-name-line { flex: 1; height: 1px; background: #EDF3EF; }
+.habit-cell { display: flex; justify-content: center; align-items: center; }
+.habit-circle { width: 24px; height: 24px; border-radius: 50%; border: 1.5px solid #DDD8D0; }
+
+/* Energy forecast */
+.energy-card { background: white; border: 0.5px solid #DDD8D0; border-radius: 16px; padding: 28px 32px; }
+
+.energy-days { display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; margin-bottom: 12px; }
+.energy-col { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.energy-day-label { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #7B9E87; }
+.energy-day-label.wknd { color: #C97B52; }
+.energy-block { width: 100%; height: 72px; background: #F6F3EE; border: 1.5px solid #EDF3EF; border-radius: 8px; }
+
+.energy-scale { display: flex; align-items: center; gap: 8px; }
+.energy-scale-bar { flex: 1; height: 4px; border-radius: 2px; background: linear-gradient(to right, #EDF3EF, #3D6148); }
+.energy-scale-label { font-size: 12px; font-weight: 300; color: #7A8278; }
+
+/* Reflection prompts */
+.prompts-card { background: #EDF3EF; border-radius: 16px; padding: 28px 32px; flex: 1; display: flex; flex-direction: column; gap: 20px; }
+
+.prompt-item { display: flex; flex-direction: column; gap: 10px; }
+.prompt-q { font-size: 18px; font-weight: 300; color: #1A1F1C; }
+.prompt-line { height: 1px; background: rgba(123,158,135,0.3); }
+
+/* Notes section */
+.notes-card { background: white; border: 0.5px solid #DDD8D0; border-radius: 16px; padding: 24px 32px; }
+.notes-lines { display: flex; flex-direction: column; gap: 18px; }
+.notes-line { height: 1px; background: #F0EDE8; }
+</style>
+</head>
+<body>
+<div class="page" data-document-role="page" data-label="Weekly Spread — Tracker">
+  <div class="chapter-tab"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+
+  <div class="content">
+
+    <!-- Habit tracker -->
+    <div>
+      <div class="section-label">Habit tracker</div>
+      <div class="habit-card">
+        <div class="habit-grid-header">
+          <div></div>
+          <div class="habit-day-head">M</div>
+          <div class="habit-day-head">T</div>
+          <div class="habit-day-head">W</div>
+          <div class="habit-day-head">T</div>
+          <div class="habit-day-head">F</div>
+          <div class="habit-day-head wknd">S</div>
+          <div class="habit-day-head wknd">S</div>
+        </div>
+        <div class="habit-row">
+          <div class="habit-name"><div class="habit-dot"></div><div class="habit-name-line"></div></div>
+          <div class="habit-cell"><div class="habit-circle"></div></div>
+          <div class="habit-cell"><div class="habit-circle"></div></div>
+          <div class="habit-cell"><div class="habit-circle"></div></div>
+          <div class="habit-cell"><div class="habit-circle"></div></div>
+          <div class="habit-cell"><div class="habit-circle"></div></div>
+          <div class="habit-cell"><div class="habit-circle"></div></div>
+          <div class="habit-cell"><div class="habit-circle"></div></div>
+        </div>
+        <div class="habit-row">
+          <div class="habit-name"><div class="habit-dot"></div><div class="habit-name-line"></div></div>
+          <div class="habit-cell"><div class="habit-circle"></div></div>
+          <div class="habit-cell"><div class="habit-circle"></div></div>
+          <div class="habit-cell"><div class="habit-circle"></div></div>
+          <div class="habit-cell"><div class="habit-circle"></div></div>
+          <div class="habit-cell"><div class="habit-circle"></div></div>
+          <div class="habit-cell"><div class="habit-circle"></div></div>
+          <div class="habit-cell"><div class="habit-circle"></div></div>
+        </div>
+        <div class="habit-row">
+          <div class="habit-name"><div class="habit-dot"></div><div class="habit-name-line"></div></div>
+          <div class="habit-cell"><div class="habit-circle"></div></div>
+          <div class="habit-cell"><div class="habit-circle"></div></div>
+          <div class="habit-cell"><div class="habit-circle"></div></div>
+          <div class="habit-cell"><div class="habit-circle"></div></div>
+          <div class="habit-cell"><div class="habit-circle"></div></div>
+          <div class="habit-cell"><div class="habit-circle"></div></div>
+          <div class="habit-cell"><div class="habit-circle"></div></div>
+        </div>
+        <div class="habit-row">
+          <div class="habit-name"><div class="habit-dot"></div><div class="habit-name-line"></div></div>
+          <div class="habit-cell"><div class="habit-circle"></div></div>
+          <div class="habit-cell"><div class="habit-circle"></div></div>
+          <div class="habit-cell"><div class="habit-circle"></div></div>
+          <div class="habit-cell"><div class="habit-circle"></div></div>
+          <div class="habit-cell"><div class="habit-circle"></div></div>
+          <div class="habit-cell"><div class="habit-circle"></div></div>
+          <div class="habit-cell"><div class="habit-circle"></div></div>
+        </div>
+        <div class="habit-row">
+          <div class="habit-name"><div class="habit-dot"></div><div class="habit-name-line"></div></div>
+          <div class="habit-cell"><div class="habit-circle"></div></div>
+          <div class="habit-cell"><div class="habit-circle"></div></div>
+          <div class="habit-cell"><div class="habit-circle"></div></div>
+          <div class="habit-cell"><div class="habit-circle"></div></div>
+          <div class="habit-cell"><div class="habit-circle"></div></div>
+          <div class="habit-cell"><div class="habit-circle"></div></div>
+          <div class="habit-cell"><div class="habit-circle"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Energy forecast -->
+    <div>
+      <div class="section-label">Energy forecast — color in your expected level each day</div>
+      <div class="energy-card">
+        <div class="energy-days">
+          <div class="energy-col"><div class="energy-day-label">Mon</div><div class="energy-block"></div></div>
+          <div class="energy-col"><div class="energy-day-label">Tue</div><div class="energy-block"></div></div>
+          <div class="energy-col"><div class="energy-day-label">Wed</div><div class="energy-block"></div></div>
+          <div class="energy-col"><div class="energy-day-label">Thu</div><div class="energy-block"></div></div>
+          <div class="energy-col"><div class="energy-day-label">Fri</div><div class="energy-block"></div></div>
+          <div class="energy-col"><div class="energy-day-label wknd">Sat</div><div class="energy-block"></div></div>
+          <div class="energy-col"><div class="energy-day-label wknd">Sun</div><div class="energy-block"></div></div>
+        </div>
+        <div class="energy-scale">
+          <div class="energy-scale-label">low</div>
+          <div class="energy-scale-bar"></div>
+          <div class="energy-scale-label">high</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reflection prompts -->
+    <div class="section-label" style="margin-bottom:0">Weekly intentions</div>
+    <div class="prompts-card">
+      <div class="prompt-item">
+        <div class="prompt-q">This week I want to feel</div>
+        <div class="prompt-line"></div>
+        <div class="prompt-line"></div>
+      </div>
+      <div class="prompt-item">
+        <div class="prompt-q">One thing I'll celebrate this week</div>
+        <div class="prompt-line"></div>
+        <div class="prompt-line"></div>
+      </div>
+      <div class="prompt-item">
+        <div class="prompt-q">What I'm carrying into this week</div>
+        <div class="prompt-line"></div>
+        <div class="prompt-line"></div>
+      </div>
+    </div>
+
+    <!-- Notes -->
+    <div class="notes-card">
+      <div class="section-label" style="margin-bottom:14px">Notes</div>
+      <div class="notes-lines">
+        <div class="notes-line"></div>
+        <div class="notes-line"></div>
+        <div class="notes-line"></div>
+        <div class="notes-line"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="page-num">10</div>
+</div>
+</body>
+</html>
