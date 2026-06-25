@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1404">
+<title>ADHD Brain OS — Bold — Cover Page</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500&family=Caveat:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    width: 1404px;
+    height: 1872px;
+    overflow: hidden;
+    background: #7C3AED;
+  }
+
+  .page {
+    width: 1404px;
+    height: 1872px;
+    background: #7C3AED;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  /* Subtle noise texture overlay */
+  .page::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(ellipse at 20% 20%, rgba(91,33,182,0.25) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 80%, rgba(28,47,34,0.2) 0%, transparent 55%),
+      radial-gradient(ellipse at 60% 10%, rgba(124,58,237,0.08) 0%, transparent 40%);
+    z-index: 0;
+  }
+
+  /* Large decorative circle — background atmosphere */
+  .bg-circle-1 {
+    position: absolute;
+    width: 900px;
+    height: 900px;
+    border-radius: 50%;
+    border: 1px solid rgba(124,58,237,0.12);
+    top: -180px;
+    right: -200px;
+    z-index: 0;
+  }
+  .bg-circle-2 {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    border: 1px solid rgba(124,58,237,0.08);
+    bottom: -100px;
+    left: -100px;
+    z-index: 0;
+  }
+  .bg-circle-3 {
+    position: absolute;
+    width: 1100px;
+    height: 1100px;
+    border-radius: 50%;
+    border: 0.5px solid rgba(124,58,237,0.06);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+  }
+
+  /* Content container */
+  .content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 120px;
+    width: 100%;
+  }
+
+  /* Brain illustration — SVG inline */
+  .brain-wrap {
+    margin-bottom: 64px;
+    opacity: 0.92;
+  }
+
+  /* Tagline above title */
+  .tagline-above {
+    font-family: 'Caveat', cursive;
+    font-size: 36px;
+    font-weight: 400;
+    color: rgba(250,250,250,0.65);
+    letter-spacing: 0.02em;
+    margin-bottom: 20px;
+  }
+
+  /* Main title */
+  .title-main {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 108px;
+    font-weight: 600;
+    color: #FAFAFA;
+    line-height: 0.92;
+    letter-spacing: -0.01em;
+    margin-bottom: 10px;
+  }
+
+  .title-sub-word {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 108px;
+    font-weight: 300;
+    font-style: italic;
+    color: rgba(250,250,250,0.75);
+    line-height: 0.92;
+    letter-spacing: -0.01em;
+    display: block;
+    margin-bottom: 36px;
+  }
+
+  /* Divider line */
+  .divider {
+    width: 120px;
+    height: 1px;
+    background: rgba(250,250,250,0.35);
+    margin: 0 auto 36px;
+  }
+
+  /* Subtitle */
+  .subtitle {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 28px;
+    font-weight: 300;
+    color: rgba(250,250,250,0.70);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: 80px;
+  }
+
+  /* Name field */
+  .name-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 60px;
+  }
+  .name-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: rgba(250,250,250,0.40);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .name-line {
+    width: 320px;
+    height: 1px;
+    background: rgba(250,250,250,0.30);
+  }
+
+  /* Edition badge */
+  .edition-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    border: 0.5px solid rgba(250,250,250,0.20);
+    border-radius: 40px;
+    padding: 10px 28px;
+  }
+  .edition-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(250,250,250,0.40);
+  }
+  .edition-text {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: rgba(250,250,250,0.40);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  /* Bottom accent — page identifier */
+  .page-bottom {
+    position: absolute;
+    bottom: 56px;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    z-index: 1;
+  }
+  .page-bottom-line {
+    width: 60px;
+    height: 0.5px;
+    background: rgba(250,250,250,0.20);
+  }
+  .page-bottom-text {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(250,250,250,0.25);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  /* Chapter tab */
+  .chapter-tab {
+    position: absolute;
+    left: 0;
+    top: 220px;
+    width: 8px;
+    height: 80px;
+    background: rgba(250,250,250,0.30);
+    border-radius: 0 4px 4px 0;
+    z-index: 1;
+  }
+
+  /* Decorative corner marks */
+  .corner-tl, .corner-br {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    z-index: 1;
+  }
+  .corner-tl {
+    top: 56px;
+    left: 56px;
+    border-top: 1px solid rgba(250,250,250,0.18);
+    border-left: 1px solid rgba(250,250,250,0.18);
+  }
+  .corner-br {
+    bottom: 56px;
+    right: 56px;
+    border-bottom: 1px solid rgba(250,250,250,0.18);
+    border-right: 1px solid rgba(250,250,250,0.18);
+  }
+</style>
+</head>
+<body>
+<div class="page" data-document-role="page" data-label="Cover Page">
+
+  <!-- Atmospheric circles -->
+  <div class="bg-circle-1"></div>
+  <div class="bg-circle-2"></div>
+  <div class="bg-circle-3"></div>
+
+  <!-- Chapter tab -->
+  <div class="chapter-tab"></div>
+
+  <!-- Corner marks -->
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+
+  <!-- Main content -->
+  <div class="content">
+
+    <!-- Brain SVG illustration -->
+    <div class="brain-wrap">
+      <svg width="200" height="180" viewBox="0 0 200 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Left hemisphere -->
+        <path d="M100 30 C85 28, 62 30, 50 45 C38 60, 36 78, 40 92 C44 106, 50 115, 58 122 C66 129, 76 133, 88 134 L100 134 L100 30 Z"
+          stroke="rgba(250,250,250,0.55)" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <!-- Right hemisphere -->
+        <path d="M100 30 C115 28, 138 30, 150 45 C162 60, 164 78, 160 92 C156 106, 150 115, 142 122 C134 129, 124 133, 112 134 L100 134 L100 30 Z"
+          stroke="rgba(250,250,250,0.55)" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <!-- Center dividing line -->
+        <line x1="100" y1="30" x2="100" y2="134" stroke="rgba(250,250,250,0.25)" stroke-width="1" stroke-dasharray="4 4"/>
+        <!-- Brain stem -->
+        <path d="M88 134 C88 144, 92 150, 100 152 C108 150, 112 144, 112 134"
+          stroke="rgba(250,250,250,0.40)" stroke-width="1.5" fill="none"/>
+        <!-- Left hemisphere folds -->
+        <path d="M58 58 C65 54, 72 56, 76 62" stroke="rgba(250,250,250,0.35)" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+        <path d="M48 76 C58 70, 68 72, 72 80" stroke="rgba(250,250,250,0.35)" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+        <path d="M50 94 C60 88, 70 91, 73 99" stroke="rgba(250,250,250,0.35)" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+        <path d="M58 112 C66 107, 75 109, 78 116" stroke="rgba(250,250,250,0.30)" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+        <!-- Right hemisphere folds -->
+        <path d="M142 58 C135 54, 128 56, 124 62" stroke="rgba(250,250,250,0.35)" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+        <path d="M152 76 C142 70, 132 72, 128 80" stroke="rgba(250,250,250,0.35)" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+        <path d="M150 94 C140 88, 130 91, 127 99" stroke="rgba(250,250,250,0.35)" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+        <path d="M142 112 C134 107, 125 109, 122 116" stroke="rgba(250,250,250,0.30)" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+        <!-- Small spark dots — representing neural activity -->
+        <circle cx="72" cy="50" r="2.5" fill="rgba(250,250,250,0.45)"/>
+        <circle cx="130" cy="50" r="2.5" fill="rgba(250,250,250,0.45)"/>
+        <circle cx="55" cy="86" r="2" fill="rgba(250,250,250,0.35)"/>
+        <circle cx="145" cy="86" r="2" fill="rgba(250,250,250,0.35)"/>
+        <circle cx="66" cy="120" r="2" fill="rgba(250,250,250,0.30)"/>
+        <circle cx="134" cy="120" r="2" fill="rgba(250,250,250,0.30)"/>
+        <!-- Botanical sprigs flanking brain -->
+        <path d="M28 90 C22 82, 18 74, 22 66" stroke="rgba(250,250,250,0.25)" stroke-width="1" fill="none" stroke-linecap="round"/>
+        <path d="M22 82 C16 80, 12 76, 14 70" stroke="rgba(250,250,250,0.20)" stroke-width="1" fill="none" stroke-linecap="round"/>
+        <path d="M26 92 C18 92, 12 88, 14 82" stroke="rgba(250,250,250,0.20)" stroke-width="1" fill="none" stroke-linecap="round"/>
+        <path d="M172 90 C178 82, 182 74, 178 66" stroke="rgba(250,250,250,0.25)" stroke-width="1" fill="none" stroke-linecap="round"/>
+        <path d="M178 82 C184 80, 188 76, 186 70" stroke="rgba(250,250,250,0.20)" stroke-width="1" fill="none" stroke-linecap="round"/>
+        <path d="M174 92 C182 92, 188 88, 186 82" stroke="rgba(250,250,250,0.20)" stroke-width="1" fill="none" stroke-linecap="round"/>
+      </svg>
+    </div>
+
+    <!-- Tagline above -->
+    <div class="tagline-above">designed for the way your brain actually works</div>
+
+    <!-- Main title -->
+    <div class="title-main">ADHD</div>
+    <span class="title-sub-word">Brain OS</span>
+
+    <!-- Divider -->
+    <div class="divider"></div>
+
+    <!-- Subtitle -->
+    <div class="subtitle">Complete Planning System</div>
+
+    <!-- Name field -->
+    <div class="name-section">
+      <div class="name-label">This planner belongs to</div>
+      <div class="name-line"></div>
+    </div>
+
+    <!-- Edition badge -->
+    <div class="edition-badge">
+      <div class="edition-dot"></div>
+      <div class="edition-text">Undated Edition</div>
+      <div class="edition-dot"></div>
+    </div>
+
+  </div>
+
+  <!-- Bottom identifier -->
+  <div class="page-bottom">
+    <div class="page-bottom-line"></div>
+    <div class="page-bottom-text">Brain OS · Cover</div>
+    <div class="page-bottom-line"></div>
+  </div>
+
+</div>
+</body>
+</html>

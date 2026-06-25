@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1404">
+<title>ADHD Brain OS — Bold — Yearly Overview</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500&family=Caveat:wght@400;500&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1404px; height: 1872px; overflow: hidden; background: #FAFAFA; }
+
+.page { width: 1404px; height: 1872px; background: #FAFAFA; position: relative; font-family: 'DM Sans', sans-serif; }
+
+.chapter-tab { position: absolute; left: 0; top: 220px; width: 8px; height: 80px; background: #EA580C; border-radius: 0 4px 4px 0; }
+.page-num { position: absolute; bottom: 56px; left: 50%; transform: translateX(-50%); font-size: 18px; font-weight: 300; color: #64748B; letter-spacing: 0.12em; }
+.corner-tl { position: absolute; top: 56px; left: 56px; width: 36px; height: 36px; border-top: 1px solid #E2E8F0; border-left: 1px solid #E2E8F0; }
+.corner-br { position: absolute; bottom: 56px; right: 56px; width: 36px; height: 36px; border-bottom: 1px solid #E2E8F0; border-right: 1px solid #E2E8F0; }
+
+.content { position: absolute; top: 100px; left: 90px; right: 90px; bottom: 90px; }
+
+/* Header row */
+.header-row { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 44px; }
+
+.header-left {}
+.eyebrow { font-size: 17px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: #EA580C; margin-bottom: 12px; }
+.title { font-family: 'Cormorant Garamond', serif; font-size: 72px; font-weight: 300; font-style: italic; color: #111111; line-height: 1.0; }
+
+.year-field {
+  display: flex; flex-direction: column; align-items: flex-end; gap: 8px;
+}
+.year-label { font-size: 14px; font-weight: 300; letter-spacing: 0.1em; text-transform: uppercase; color: #64748B; }
+.year-line { width: 180px; height: 1px; background: #E2E8F0; }
+.year-hint { font-family: 'Caveat', cursive; font-size: 20px; color: #7C3AED; }
+
+/* Month grid — 3x4 */
+.month-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.month-box {
+  background: #FFFFFF; border: 0.5px solid #E2E8F0;
+  border-radius: 12px; padding: 20px 22px;
+  display: flex; flex-direction: column;
+  min-height: 220px;
+}
+
+.month-header {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 16px; padding-bottom: 12px;
+  border-bottom: 1px solid #F5F3FF;
+}
+
+.month-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 26px; font-weight: 600; color: #5B21B6;
+}
+
+.month-num {
+  font-size: 13px; font-weight: 300; color: #E2E8F0;
+  font-family: 'DM Sans', sans-serif;
+  letter-spacing: 0.06em;
+}
+
+.month-lines { flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+.month-line { height: 1px; background: #F8FAFC; }
+
+/* Tip strip */
+.tip-strip {
+  margin-top: 20px;
+  background: #F5F3FF; border-radius: 10px;
+  padding: 16px 24px;
+  display: flex; align-items: center; gap: 14px;
+}
+.tip-icon { font-size: 22px; flex-shrink: 0; }
+.tip-text { font-size: 19px; font-weight: 300; color: #5B21B6; line-height: 1.4; }
+
+    /* Bold chapter color override */
+    .chapter-tab { background: #DC2626 !important; }
+    .eyebrow { color: #DC2626 !important; }
+    .month-eyebrow { color: #DC2626 !important; }
+    .sec-label { color: #DC2626 !important; }
+    .card-label { color: #DC2626 !important; }
+    
+</style>
+</head>
+<body>
+<div class="page" data-document-role="page" data-label="Yearly Overview">
+  <div class="chapter-tab"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+
+  <div class="content">
+    <div class="header-row">
+      <div class="header-left">
+        <div class="eyebrow">Big Picture View</div>
+        <div class="title">Yearly<br>Overview</div>
+      </div>
+      <div class="year-field">
+        <div class="year-label">Year</div>
+        <div class="year-line"></div>
+        <div class="year-hint">3–4 entries per month max</div>
+      </div>
+    </div>
+
+    <div class="month-grid">
+      <!-- Row 1 -->
+      <div class="month-box">
+        <div class="month-header">
+          <div class="month-name">January</div>
+          <div class="month-num">01</div>
+        </div>
+        <div class="month-lines">
+          <div class="month-line"></div>
+          <div class="month-line"></div>
+          <div class="month-line"></div>
+          <div class="month-line"></div>
+          <div class="month-line"></div>
+        </div>
+      </div>
+
+      <div class="month-box">
+        <div class="month-header">
+          <div class="month-name">February</div>
+          <div class="month-num">02</div>
+        </div>
+        <div class="month-lines">
+          <div class="month-line"></div>
+          <div class="month-line"></div>
+          <div class="month-line"></div>
+          <div class="month-line"></div>
+          <div class="month-line"></div>
+        </div>
+      </div>
+
+      <div class="month-box">
+        <div class="month-header">
+          <div class="month-name">March</div>
+          <div class="month-num">03</div>
+        </div>
+        <div class="month-lines">
+          <div class="month-line"></div>
+          <div class="month-line"></div>
+          <div class="month-line"></div>
+          <div class="month-line"></div>
+          <div class="month-line"></div>
+        </div>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="month-box">
+        <div class="month-header">
+          <div class="month-name">April</div>
+          <div class="month-num">04</div>
+        </div>
+        <div class="month-lines">
+          <div class="month-line"></div>
+          <div class="month-line"></div>
+          <div class="month-line"></div>
+          <div class="month-line"></div>
+          <div class="month-line"></div>
+        </div>
+      </div>
+
+      <div class="month-box">
+        <div class="month-header">
+          <div class="month-name">May</div>
+          <div class="month-num">05</div>
+        </div>
+        <div class="month-lines">
+          <div class="month-line"></div>
+          <div class="month-line"></div>
+          <div class="month-line"></div>
+          <div class="month-line"></div>
+          <div class="month-line"></div>
+        </div>
+      </div>
+
+      <div class="month-box">
+        <div class="month-header">
+          <div class="month-name">June</div>
+          <div class="month-num">06</div>
+        </div>
+        <div class="month-lines">
+          <div class="month-line"></div>
+          <div class="month-line"></div>
+          <div class="month-line"></div>
+          <div class="month-line"></div>
+          <div class="month-line"></div>
+        </div>
+      </div>
+
+      <!-- Row 3 -->
+      <div class="month-box">
+        <div class="month-header">
+          <div class="month-name">July</div>
+          <div class="month-num">07</div>
+        </div>
+        <div class="month-lines">
+          <div class="month-line"></div>
+          <div class="month-line"></div>
+          <div class="month-line"></div>
+          <div class="month-line"></div>
+          <div class="month-line"></div>
+        </div>
+      </div>
+
+      <div class="month-box">
+        <div class="month-header">
+          <div class="month-name">August</div>
+          <div class="month-num">08</div>
+        </div>
+        <div class="month-lines">
+          <div class="month-line"></div>
+          <div class="month-line"></div>
+          <div class="month-line"></div>
+          <div class="month-line"></div>
+          <div class="month-line"></div>
+        </div>
+      </div>
+
+      <div class="month-box">
+        <div class="month-header">
+          <div class="month-name">September</div>
+          <div class="month-num">09</div>
+        </div>
+        <div class="month-lines">
+          <div class="month-line"></div>
+          <div class="month-line"></div>
+          <div class="month-line"></div>
+          <div class="month-line"></div>
+          <div class="month-line"></div>
+        </div>
+      </div>
+
+      <!-- Row 4 -->
+      <div class="month-box">
+        <div class="month-header">
+          <div class="month-name">October</div>
+          <div class="month-num">10</div>
+        </div>
+        <div class="month-lines">
+          <div class="month-line"></div>
+          <div class="month-line"></div>
+          <div class="month-line"></div>
+          <div class="month-line"></div>
+          <div class="month-line"></div>
+        </div>
+      </div>
+
+      <div class="month-box">
+        <div class="month-header">
+          <div class="month-name">November</div>
+          <div class="month-num">11</div>
+        </div>
+        <div class="month-lines">
+          <div class="month-line"></div>
+          <div class="month-line"></div>
+          <div class="month-line"></div>
+          <div class="month-line"></div>
+          <div class="month-line"></div>
+        </div>
+      </div>
+
+      <div class="month-box">
+        <div class="month-header">
+          <div class="month-name">December</div>
+          <div class="month-num">12</div>
+        </div>
+        <div class="month-lines">
+          <div class="month-line"></div>
+          <div class="month-line"></div>
+          <div class="month-line"></div>
+          <div class="month-line"></div>
+          <div class="month-line"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tip-strip">
+      <div class="tip-icon">💡</div>
+      <div class="tip-text">Time blindness tip: Only log 3–4 events per month. Too many entries defeats the purpose — this is your radar, not your diary.</div>
+    </div>
+  </div>
+
+  <div class="page-num">06</div>
+</div>
+</body>
+</html>

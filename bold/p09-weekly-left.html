@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1404">
+<title>ADHD Brain OS — Bold — Weekly Spread Left</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=Caveat:wght@400;500&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1404px; height: 1872px; overflow: hidden; background: #FAFAFA; }
+.page { width: 1404px; height: 1872px; background: #FAFAFA; position: relative; font-family: 'DM Sans', sans-serif; }
+
+.chapter-tab { position: absolute; left: 0; top: 220px; width: 8px; height: 80px; background: #7C3AED; border-radius: 0 4px 4px 0; }
+.page-num { position: absolute; bottom: 56px; left: 50%; transform: translateX(-50%); font-size: 18px; font-weight: 300; color: #64748B; letter-spacing: 0.12em; }
+.corner-tl { position: absolute; top: 56px; left: 56px; width: 36px; height: 36px; border-top: 1px solid #E2E8F0; border-left: 1px solid #E2E8F0; }
+.corner-br { position: absolute; bottom: 56px; right: 56px; width: 36px; height: 36px; border-bottom: 1px solid #E2E8F0; border-right: 1px solid #E2E8F0; }
+
+.content { position: absolute; top: 100px; left: 90px; right: 90px; bottom: 100px; display: flex; flex-direction: column; }
+
+/* Header */
+.week-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 32px; }
+.week-eyebrow { font-size: 14px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #7C3AED; margin-bottom: 8px; }
+.week-title { font-family: 'Cormorant Garamond', serif; font-size: 72px; font-weight: 300; font-style: italic; color: #111111; line-height: 0.9; }
+.week-of-field { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; padding-bottom: 10px; }
+.week-of-label { font-size: 14px; font-weight: 300; letter-spacing: 0.1em; text-transform: uppercase; color: #64748B; }
+.week-of-line { width: 240px; height: 1px; background: #E2E8F0; }
+
+/* Top 3 */
+.section-label { font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #7C3AED; margin-bottom: 12px; }
+
+.top3-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-bottom: 28px; }
+.top3-box { background: #F5F3FF; border-radius: 12px; padding: 16px 20px; display: flex; align-items: center; gap: 12px; }
+.top3-num { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 600; color: #7C3AED; flex-shrink: 0; line-height: 1; }
+.top3-line { flex: 1; height: 1px; background: rgba(124,58,237,0.3); }
+
+/* Day rows */
+.days-section { flex: 1; display: flex; flex-direction: column; gap: 0; margin-bottom: 20px; }
+
+.day-row { display: flex; align-items: stretch; border-bottom: 0.5px solid #F5F3FF; padding: 0; }
+.day-row:first-child { border-top: 0.5px solid #F5F3FF; }
+.day-row.weekend { background: #FAFAFA; }
+
+.day-label-wrap { width: 90px; flex-shrink: 0; display: flex; flex-direction: column; justify-content: center; padding: 14px 0 14px 0; border-right: 1px solid #F5F3FF; margin-right: 20px; }
+.day-abbr { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #7C3AED; }
+.day-row.weekend .day-abbr { color: #EA580C; }
+.day-date-line { width: 40px; height: 1px; background: #E2E8F0; margin-top: 6px; }
+
+.day-lines-wrap { flex: 1; display: flex; flex-direction: column; justify-content: space-evenly; padding: 10px 0; gap: 10px; }
+.day-content-line { height: 1px; background: #F5F3FF; }
+
+/* Brain dump */
+.brain-dump { background: #F1F5F9; border-radius: 14px; padding: 24px 28px; }
+.brain-dump-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+.brain-dump-icon { font-size: 22px; }
+.brain-dump-label { font-family: 'Caveat', cursive; font-size: 28px; color: #5B21B6; }
+.brain-dump-hint { font-size: 15px; font-weight: 300; color: #64748B; margin-left: auto; }
+.brain-lines { display: flex; flex-direction: column; gap: 18px; }
+.brain-line { height: 1px; background: rgba(226,232,240,0.3); }
+
+    /* Bold chapter color override */
+    .chapter-tab { background: #16A34A !important; }
+    .eyebrow { color: #16A34A !important; }
+    .month-eyebrow { color: #16A34A !important; }
+    .sec-label { color: #16A34A !important; }
+    .card-label { color: #16A34A !important; }
+    
+</style>
+</head>
+<body>
+<div class="page" data-document-role="page" data-label="Weekly Spread — Overview">
+  <div class="chapter-tab"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+
+  <div class="content">
+
+    <!-- Header -->
+    <div class="week-header">
+      <div>
+        <div class="week-eyebrow">Weekly Planning</div>
+        <div class="week-title">This Week</div>
+      </div>
+      <div class="week-of-field">
+        <div class="week-of-label">Week of</div>
+        <div class="week-of-line"></div>
+      </div>
+    </div>
+
+    <!-- Top 3 -->
+    <div class="section-label">This week's top 3 — that's it</div>
+    <div class="top3-row">
+      <div class="top3-box"><div class="top3-num">①</div><div class="top3-line"></div></div>
+      <div class="top3-box"><div class="top3-num">②</div><div class="top3-line"></div></div>
+      <div class="top3-box"><div class="top3-num">③</div><div class="top3-line"></div></div>
+    </div>
+
+    <!-- Days -->
+    <div class="days-section">
+      <div class="day-row">
+        <div class="day-label-wrap"><div class="day-abbr">Mon</div><div class="day-date-line"></div></div>
+        <div class="day-lines-wrap"><div class="day-content-line"></div><div class="day-content-line"></div></div>
+      </div>
+      <div class="day-row">
+        <div class="day-label-wrap"><div class="day-abbr">Tue</div><div class="day-date-line"></div></div>
+        <div class="day-lines-wrap"><div class="day-content-line"></div><div class="day-content-line"></div></div>
+      </div>
+      <div class="day-row">
+        <div class="day-label-wrap"><div class="day-abbr">Wed</div><div class="day-date-line"></div></div>
+        <div class="day-lines-wrap"><div class="day-content-line"></div><div class="day-content-line"></div></div>
+      </div>
+      <div class="day-row">
+        <div class="day-label-wrap"><div class="day-abbr">Thu</div><div class="day-date-line"></div></div>
+        <div class="day-lines-wrap"><div class="day-content-line"></div><div class="day-content-line"></div></div>
+      </div>
+      <div class="day-row">
+        <div class="day-label-wrap"><div class="day-abbr">Fri</div><div class="day-date-line"></div></div>
+        <div class="day-lines-wrap"><div class="day-content-line"></div><div class="day-content-line"></div></div>
+      </div>
+      <div class="day-row weekend">
+        <div class="day-label-wrap"><div class="day-abbr">Sat</div><div class="day-date-line"></div></div>
+        <div class="day-lines-wrap"><div class="day-content-line"></div><div class="day-content-line"></div></div>
+      </div>
+      <div class="day-row weekend">
+        <div class="day-label-wrap"><div class="day-abbr">Sun</div><div class="day-date-line"></div></div>
+        <div class="day-lines-wrap"><div class="day-content-line"></div><div class="day-content-line"></div></div>
+      </div>
+    </div>
+
+    <!-- Brain dump -->
+    <div class="brain-dump">
+      <div class="brain-dump-header">
+        <div class="brain-dump-icon">🧠</div>
+        <div class="brain-dump-label">brain dump — get it out of your head</div>
+        <div class="brain-dump-hint">write anything</div>
+      </div>
+      <div class="brain-lines">
+        <div class="brain-line"></div>
+        <div class="brain-line"></div>
+        <div class="brain-line"></div>
+        <div class="brain-line"></div>
+        <div class="brain-line"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="page-num">09</div>
+</div>
+</body>
+</html>
