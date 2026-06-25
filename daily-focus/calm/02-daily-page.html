@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1404">
+<title>ADHD Daily Focus Sheet — Page — Calm</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=Caveat:wght@400;500&display=swap" rel="stylesheet">
+<style>*{margin:0;padding:0;box-sizing:border-box}html,body{width:1404px;height:1872px;overflow:hidden;background:#F6F3EE}
+.page{width:1404px;height:1872px;background:#F6F3EE;position:relative;font-family:'DM Sans', sans-serif}
+.chapter-tab{position:absolute;left:0;top:220px;width:8px;height:120px;background:#3D6148;border-radius:0 4px 4px 0}
+.page-num{position:absolute;bottom:44px;left:50%;transform:translateX(-50%);font-size:18px;font-weight:300;color:#7A8278;letter-spacing:.12em}
+.corner-tl{position:absolute;top:44px;left:56px;width:36px;height:36px;border-top:1px solid #DDD8D0;border-left:1px solid #DDD8D0}
+.corner-br{position:absolute;bottom:44px;right:56px;width:36px;height:36px;border-bottom:1px solid #DDD8D0;border-right:1px solid #DDD8D0}
+
+.layout{position:absolute;top:72px;left:80px;right:80px;bottom:72px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.left-col{display:flex;flex-direction:column;gap:14px}
+.right-col{display:flex;flex-direction:column;gap:14px}
+.micro-label{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#7A8278;margin-bottom:10px}
+.mood-card{background:#FFFFFF;border:0.5px solid #DDD8D0;border-radius:14px;padding:18px 22px}
+.mood-icons{display:flex;gap:10px;flex-wrap:wrap}
+.mood-icon-item{display:flex;flex-direction:column;align-items:center;gap:4px}
+.mood-emoji{font-size:26px;line-height:1}
+.mood-word{font-size:10px;font-weight:300;color:#7A8278;letter-spacing:.04em}
+.energy-bar-wrap{margin-top:12px;display:flex;align-items:center;gap:10px}
+.energy-label-s{font-size:11px;font-weight:300;color:#7A8278}
+.energy-segments{display:flex;gap:5px;flex:1}
+.energy-seg{height:8px;flex:1;border-radius:4px;background:#DDD8D0;border:1px solid #F0EDE8}
+.top3-card{background:#FFFFFF;border:0.5px solid #DDD8D0;border-radius:14px;padding:18px 22px}
+.top3-items{display:flex;flex-direction:column;gap:12px;margin-top:10px}
+.top3-item{display:flex;align-items:center;gap:12px}
+.top3-badge{width:28px;height:28px;border-radius:50%;background:#EDF3EF;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond', serif;font-size:16px;font-weight:600;color:#3D6148;flex-shrink:0}
+.top3-line{flex:1;height:1px;background:#F0EDE8}
+.win-card{background:#EDF3EF;border-radius:14px;padding:16px 22px;display:flex;align-items:center;gap:12px}
+.win-content{flex:1}
+.win-label{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#3D6148;margin-bottom:8px}
+.win-line{height:1px;background:rgba(0,0,0,.1)}
+.focus-card{background:#FFFFFF;border:0.5px solid #DDD8D0;border-radius:14px;padding:18px 22px}
+.focus-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:10px}
+.focus-item{display:flex;flex-direction:column;gap:6px}
+.focus-sub-label{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#7A8278}
+.pom-circles{display:flex;gap:8px;margin-top:4px}
+.pom-c{width:28px;height:28px;border-radius:50%;border:1.5px solid #DDD8D0;display:flex;align-items:center;justify-content:center;font-size:14px}
+.bd-box{display:flex;align-items:center;gap:10px;margin-top:4px}
+.bd-cb{width:20px;height:20px;border-radius:4px;border:1.5px solid #DDD8D0;flex-shrink:0}
+.bd-lbl{font-size:14px;font-weight:300;color:#7A8278}
+.t-line{height:1px;background:#F0EDE8;margin-top:6px}
+.distract-card{background:#FAE8DC;border-radius:14px;padding:16px 22px}
+.distract-lines{display:flex;flex-direction:column;gap:14px;margin-top:10px}
+.distract-line{height:1px;background:rgba(0,0,0,.08)}
+.brain-card{background:#E8DDD0;border-radius:14px;padding:16px 22px;flex:1}
+.brain-lines{display:flex;flex-direction:column;gap:16px;margin-top:10px}
+.brain-line{height:1px;background:rgba(0,0,0,.08)}
+.timeblock-card{background:#FFFFFF;border:0.5px solid #DDD8D0;border-radius:14px;padding:18px 22px;flex:1}
+.tb-rows{display:flex;flex-direction:column;gap:0;margin-top:10px}
+.tb-row{display:flex;align-items:center;gap:12px;padding:7px 0;border-bottom:0.5px solid #F0EDE8}
+.tb-row:last-child{border-bottom:none}
+.tb-time{font-size:12px;font-weight:500;color:#DDD8D0;width:44px;flex-shrink:0;text-align:right;font-family:'DM Sans',sans-serif;letter-spacing:.04em}
+.tb-block{flex:1;height:26px;border-radius:6px;background:#F0EDE8}
+.tb-row.p .tb-block{background:#EDF3EF;border:1px solid #C5D9CC}
+.tb-row.f .tb-block{background:#EEF2FF;border:1px solid #C7D2FE}
+.tb-row.r .tb-block{background:#FAE8DC;border:1px solid #DDD8D0}
+.priority-card{background:#FFFFFF;border:0.5px solid #DDD8D0;border-radius:14px;padding:18px 22px}
+.priority-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:10px}
+.priority-col{display:flex;flex-direction:column;gap:6px}
+.p-col-lbl{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:6px 10px;border-radius:6px;text-align:center}
+.p-must{background:#EDF3EF;color:#3D6148}
+.p-should{background:#FAE8DC;color:#7A3A1A}
+.p-nice{background:#F0EDE8;color:#7A8278}
+.p-line{height:1px;background:#F0EDE8}
+.closeout-card{background:#1A1F1C;border-radius:14px;padding:20px 22px}
+.co-title{font-family:'Caveat', cursive;font-size:22px;color:rgba(246,243,238,.45);margin-bottom:14px}
+.co-items{display:flex;flex-direction:column;gap:12px}
+.co-item{display:flex;flex-direction:column;gap:7px}
+.co-lbl{font-size:11px;font-weight:300;color:rgba(246,243,238,.35);letter-spacing:.08em}
+.co-line{height:1px;background:rgba(246,243,238,.1)}
+
+</style>
+</head>
+<body>
+<div class="page" data-document-role="page">
+  <div class="chapter-tab"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  
+    <div class="layout">
+      <div class="left-col">
+        <div style="display:flex;align-items:center;justify-content:space-between">
+          <div style="font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#3D6148">Daily Focus</div>
+          <div style="display:flex;gap:16px">
+            <div style="display:flex;flex-direction:column;gap:5px"><div style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#7A8278">Date</div><div style="width:100px;height:1px;background:#DDD8D0"></div></div>
+            <div style="display:flex;flex-direction:column;gap:5px"><div style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#7A8278">Day</div><div style="width:70px;height:1px;background:#DDD8D0"></div></div>
+          </div>
+        </div>
+        <div class="mood-card">
+          <div class="micro-label">How am I feeling right now</div>
+          <div class="mood-icons">
+            <div class="mood-icon-item"><div class="mood-emoji">😬</div><div class="mood-word">anxious</div></div>
+            <div class="mood-icon-item"><div class="mood-emoji">😴</div><div class="mood-word">tired</div></div>
+            <div class="mood-icon-item"><div class="mood-emoji">😌</div><div class="mood-word">okay</div></div>
+            <div class="mood-icon-item"><div class="mood-emoji">😊</div><div class="mood-word">good</div></div>
+            <div class="mood-icon-item"><div class="mood-emoji">🔥</div><div class="mood-word">fired up</div></div>
+            <div class="mood-icon-item"><div class="mood-emoji">🌀</div><div class="mood-word">scattered</div></div>
+            <div class="mood-icon-item"><div class="mood-emoji">🧠</div><div class="mood-word">focused</div></div>
+          </div>
+          <div class="energy-bar-wrap">
+            <div class="energy-label-s">energy</div>
+            <div class="energy-segments"><div class="energy-seg"></div><div class="energy-seg"></div><div class="energy-seg"></div><div class="energy-seg"></div><div class="energy-seg"></div></div>
+            <div class="energy-label-s">1 → 5</div>
+          </div>
+        </div>
+        <div class="top3-card">
+          <div class="micro-label">Today's top 3 — that's the whole list</div>
+          <div class="top3-items">
+            <div class="top3-item"><div class="top3-badge">①</div><div class="top3-line"></div></div>
+            <div class="top3-item"><div class="top3-badge">②</div><div class="top3-line"></div></div>
+            <div class="top3-item"><div class="top3-badge">③</div><div class="top3-line"></div></div>
+          </div>
+        </div>
+        <div class="win-card">
+          <div style="font-size:20px;flex-shrink:0">✨</div>
+          <div class="win-content"><div class="win-label">One thing that would make today a win</div><div class="win-line"></div></div>
+        </div>
+        <div class="focus-card">
+          <div class="micro-label">Focus tools</div>
+          <div class="focus-row">
+            <div class="focus-item"><div class="focus-sub-label">🍅 Pomodoros</div><div class="pom-circles"><div class="pom-c"></div><div class="pom-c"></div><div class="pom-c"></div><div class="pom-c"></div></div></div>
+            <div class="focus-item"><div class="focus-sub-label">👥 Body double</div><div class="bd-box"><div class="bd-cb"></div><div class="bd-lbl">Active today</div></div></div>
+            <div class="focus-item"><div class="focus-sub-label">⏰ Set timer for</div><div class="t-line"></div><div class="t-line"></div></div>
+            <div class="focus-item"><div class="focus-sub-label">⚡ Hyperfocus check</div><div class="bd-box"><div class="bd-cb"></div><div class="bd-lbl">Timer set?</div></div></div>
+          </div>
+        </div>
+        <div class="distract-card">
+          <div class="micro-label" style="color:#7A3A1A">🌀 Distraction capture — write it, release it</div>
+          <div class="distract-lines"><div class="distract-line"></div><div class="distract-line"></div><div class="distract-line"></div></div>
+        </div>
+        <div class="brain-card">
+          <div class="micro-label">🧠 Brain dump</div>
+          <div class="brain-lines"><div class="brain-line"></div><div class="brain-line"></div><div class="brain-line"></div><div class="brain-line"></div><div class="brain-line"></div></div>
+        </div>
+      </div>
+      <div class="right-col">
+        <div class="timeblock-card">
+          <div class="micro-label">Time blocks</div>
+          <div class="tb-rows">
+            <div class="tb-row"><div class="tb-time">6am</div><div class="tb-block"></div></div>
+            <div class="tb-row"><div class="tb-time">7am</div><div class="tb-block"></div></div>
+            <div class="tb-row p"><div class="tb-time">8am</div><div class="tb-block"></div></div>
+            <div class="tb-row p"><div class="tb-time">9am</div><div class="tb-block"></div></div>
+            <div class="tb-row f"><div class="tb-time">10am</div><div class="tb-block"></div></div>
+            <div class="tb-row f"><div class="tb-time">11am</div><div class="tb-block"></div></div>
+            <div class="tb-row r"><div class="tb-time">12pm</div><div class="tb-block"></div></div>
+            <div class="tb-row"><div class="tb-time">1pm</div><div class="tb-block"></div></div>
+            <div class="tb-row f"><div class="tb-time">2pm</div><div class="tb-block"></div></div>
+            <div class="tb-row f"><div class="tb-time">3pm</div><div class="tb-block"></div></div>
+            <div class="tb-row"><div class="tb-time">4pm</div><div class="tb-block"></div></div>
+            <div class="tb-row"><div class="tb-time">5pm</div><div class="tb-block"></div></div>
+            <div class="tb-row r"><div class="tb-time">6pm</div><div class="tb-block"></div></div>
+            <div class="tb-row"><div class="tb-time">7pm</div><div class="tb-block"></div></div>
+            <div class="tb-row"><div class="tb-time">8pm</div><div class="tb-block"></div></div>
+            <div class="tb-row"><div class="tb-time">9pm</div><div class="tb-block"></div></div>
+            <div class="tb-row"><div class="tb-time">10pm</div><div class="tb-block"></div></div>
+          </div>
+        </div>
+        <div class="priority-card">
+          <div class="micro-label">Priority sort</div>
+          <div class="priority-grid">
+            <div class="priority-col"><div class="p-col-lbl p-must">Must do</div><div class="p-line"></div><div class="p-line"></div><div class="p-line"></div></div>
+            <div class="priority-col"><div class="p-col-lbl p-should">Should do</div><div class="p-line"></div><div class="p-line"></div><div class="p-line"></div></div>
+            <div class="priority-col"><div class="p-col-lbl p-nice">Nice to do</div><div class="p-line"></div><div class="p-line"></div><div class="p-line"></div></div>
+          </div>
+        </div>
+        <div class="closeout-card">
+          <div class="co-title">end of day close-out ✦ no judgment</div>
+          <div class="co-items">
+            <div class="co-item"><div class="co-lbl">What I actually did today</div><div class="co-line"></div><div class="co-line"></div></div>
+            <div class="co-item"><div class="co-lbl">One thing I'm proud of</div><div class="co-line"></div></div>
+            <div class="co-item"><div class="co-lbl">Carry forward to tomorrow</div><div class="co-line"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <div class="page-num">02</div>
+</div>
+</body>
+</html>
