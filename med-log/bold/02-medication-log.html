@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1404">
+<title>Medication & Symptom Log — Daily Log — Bold Theme</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=Caveat:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1404px;height:1872px;overflow:hidden;background:#FAFAFA}
+.page{width:1404px;height:1872px;background:#FAFAFA;position:relative;font-family:'DM Sans', sans-serif}
+.chapter-tab{position:absolute;left:0;top:220px;width:8px;height:80px;background:#2563EB;border-radius:0 4px 4px 0}
+.page-num{position:absolute;bottom:56px;left:50%;transform:translateX(-50%);font-size:18px;font-weight:300;color:#64748B;letter-spacing:.12em}
+.corner-tl{position:absolute;top:56px;left:56px;width:36px;height:36px;border-top:1px solid #E2E8F0;border-left:1px solid #E2E8F0}
+.corner-br{position:absolute;bottom:56px;right:56px;width:36px;height:36px;border-bottom:1px solid #E2E8F0;border-right:1px solid #E2E8F0}
+.content{position:absolute;top:100px;left:90px;right:90px;bottom:90px;display:flex;flex-direction:column}
+.eyebrow{font-size:16px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#7C3AED;margin-bottom:10px}
+.title{font-family:'Cormorant Garamond', serif;font-size:72px;font-weight:300;font-style:italic;color:#111111;line-height:.95;margin-bottom:10px}
+.subtitle{font-size:20px;font-weight:300;color:#64748B;margin-bottom:20px;line-height:1.5}
+.sec-label{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#7C3AED;margin-bottom:12px}
+.card{background:#FFFFFF;border:0.5px solid #E2E8F0;border-radius:16px;padding:28px 32px}
+.card-accent{background:#F5F3FF;border:0.5px solid #DDD6FE;border-radius:16px;padding:28px 32px}
+.card-dark{background:#111111;border-radius:16px;padding:28px 32px}
+.fill-line{height:1px;background:#F8FAFC;margin-bottom:18px}
+.fill-line:last-child{margin-bottom:0}
+
+.disc{background:#FFF7ED;border-radius:12px;padding:13px 20px;font-size:16px;font-weight:300;color:#9A3412;display:flex;gap:10px;align-items:center;margin-bottom:14px}
+.log-card{background:#FFFFFF;border:0.5px solid #E2E8F0;border-radius:16px;overflow:hidden;margin-bottom:16px}
+.log-header{display:grid;grid-template-columns:90px 1fr 70px 100px 110px 1fr;background:#F5F3FF;padding:12px 20px;gap:12px}
+.lh{font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:#5B21B6}
+.log-row{display:grid;grid-template-columns:90px 1fr 70px 100px 110px 1fr;padding:12px 20px;gap:12px;border-top:0.5px solid #F8FAFC;align-items:center}
+.lc{height:1px;background:#F8FAFC}
+.notes-card{background:#FFFFFF;border:0.5px solid #E2E8F0;border-radius:16px;padding:22px 28px}
+.notes-rows{display:flex;flex-direction:column;gap:16px;margin-top:10px}
+.nr{height:1px;background:#F8FAFC}
+
+</style>
+</head>
+<body>
+<div class="page" data-document-role="page">
+  <div class="chapter-tab"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+
+    <div>
+      <div class="eyebrow">Medication &amp; Symptom Log</div>
+      <div class="title">Daily<br>Medication Log</div>
+      <div class="subtitle">Fill in once a day. Takes 60 seconds.</div>
+    </div>
+    <div class="disc"><span>📋</span><span>Personal tracking tool — not a medical record. Consult your prescriber before changing medication.</span></div>
+    <div class="log-card">
+      <div class="log-header">
+        <div class="lh">Date</div><div class="lh">Medication</div><div class="lh">Dose</div>
+        <div class="lh">Time taken</div><div class="lh">Mood 1–5</div><div class="lh">Notes / side effects</div>
+      </div>
+      <div class="log-row"><div class="lc"></div><div class="lc"></div><div class="lc"></div><div class="lc"></div><div class="lc"></div><div class="lc"></div></div><div class="log-row"><div class="lc"></div><div class="lc"></div><div class="lc"></div><div class="lc"></div><div class="lc"></div><div class="lc"></div></div><div class="log-row"><div class="lc"></div><div class="lc"></div><div class="lc"></div><div class="lc"></div><div class="lc"></div><div class="lc"></div></div><div class="log-row"><div class="lc"></div><div class="lc"></div><div class="lc"></div><div class="lc"></div><div class="lc"></div><div class="lc"></div></div><div class="log-row"><div class="lc"></div><div class="lc"></div><div class="lc"></div><div class="lc"></div><div class="lc"></div><div class="lc"></div></div><div class="log-row"><div class="lc"></div><div class="lc"></div><div class="lc"></div><div class="lc"></div><div class="lc"></div><div class="lc"></div></div><div class="log-row"><div class="lc"></div><div class="lc"></div><div class="lc"></div><div class="lc"></div><div class="lc"></div><div class="lc"></div></div><div class="log-row"><div class="lc"></div><div class="lc"></div><div class="lc"></div><div class="lc"></div><div class="lc"></div><div class="lc"></div></div><div class="log-row"><div class="lc"></div><div class="lc"></div><div class="lc"></div><div class="lc"></div><div class="lc"></div><div class="lc"></div></div><div class="log-row"><div class="lc"></div><div class="lc"></div><div class="lc"></div><div class="lc"></div><div class="lc"></div><div class="lc"></div></div><div class="log-row"><div class="lc"></div><div class="lc"></div><div class="lc"></div><div class="lc"></div><div class="lc"></div><div class="lc"></div></div><div class="log-row"><div class="lc"></div><div class="lc"></div><div class="lc"></div><div class="lc"></div><div class="lc"></div><div class="lc"></div></div>
+    </div>
+    <div class="notes-card">
+      <div class="sec-label">General notes this week</div>
+      <div class="notes-rows"><div class="nr"></div><div class="nr"></div><div class="nr"></div><div class="nr"></div></div>
+    </div>
+
+  </div>
+  <div class="page-num">02</div>
+</div>
+</body>
+</html>

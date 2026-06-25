@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1404">
+<title>Medication & Symptom Log — Symptom Tracker — Dark Theme</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=Caveat:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1404px;height:1872px;overflow:hidden;background:#0F111A}
+.page{width:1404px;height:1872px;background:#0F111A;position:relative;font-family:'DM Sans', sans-serif}
+.chapter-tab{position:absolute;left:0;top:220px;width:8px;height:80px;background:#2AA8AE;border-radius:0 4px 4px 0}
+.page-num{position:absolute;bottom:56px;left:50%;transform:translateX(-50%);font-size:18px;font-weight:300;color:#8892A4;letter-spacing:.12em}
+.corner-tl{position:absolute;top:56px;left:56px;width:36px;height:36px;border-top:1px solid #2A2D3E;border-left:1px solid #2A2D3E}
+.corner-br{position:absolute;bottom:56px;right:56px;width:36px;height:36px;border-bottom:1px solid #2A2D3E;border-right:1px solid #2A2D3E}
+.content{position:absolute;top:100px;left:90px;right:90px;bottom:90px;display:flex;flex-direction:column}
+.eyebrow{font-size:16px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#4FC3C8;margin-bottom:10px}
+.title{font-family:'Cormorant Garamond', serif;font-size:72px;font-weight:300;font-style:italic;color:#E8EAF0;line-height:.95;margin-bottom:10px}
+.subtitle{font-size:20px;font-weight:300;color:#8892A4;margin-bottom:20px;line-height:1.5}
+.sec-label{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#4FC3C8;margin-bottom:12px}
+.card{background:#1A1D2E;border:0.5px solid #2A2D3E;border-radius:16px;padding:28px 32px}
+.card-accent{background:#1F2A3C;border:0.5px solid #1E6A6E;border-radius:16px;padding:28px 32px}
+.card-dark{background:#E8EAF0;border-radius:16px;padding:28px 32px}
+.fill-line{height:1px;background:#1A1D2E;margin-bottom:18px}
+.fill-line:last-child{margin-bottom:0}
+
+.sym-card{background:#1A1D2E;border:0.5px solid #2A2D3E;border-radius:16px;padding:24px 28px;margin-bottom:14px}
+.sym-header{display:grid;grid-template-columns:130px repeat(7,1fr);margin-bottom:12px}
+.dh{text-align:center;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#4FC3C8}
+.srow{display:grid;grid-template-columns:130px repeat(7,1fr);align-items:center;margin-bottom:14px}
+.srow:last-child{margin-bottom:0}
+.slbl{font-size:14px;font-weight:400;color:#8892A4}
+.scell{display:flex;justify-content:center}
+.sdots{display:flex;gap:4px}
+.sd{width:13px;height:13px;border-radius:50%;border:1.5px solid #1A1D2E}
+.mood-card{background:#1F2A3C;border-radius:14px;padding:22px 28px;margin-bottom:14px}
+.mood-week{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin-top:10px}
+.mday{display:flex;flex-direction:column;align-items:center;gap:6px}
+.mday-lbl{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#2AA8AE}
+.mday-box{width:100%;height:56px;background:#1A1D2E;border:1.5px solid #1E6A6E;border-radius:8px}
+.pattern-card{background:#1A1D2E;border:0.5px solid #2A2D3E;border-radius:14px;padding:22px 28px}
+.plines{display:flex;flex-direction:column;gap:14px;margin-top:10px}
+.pline{height:1px;background:#1A1D2E}
+
+</style>
+</head>
+<body>
+<div class="page" data-document-role="page">
+  <div class="chapter-tab"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+
+    <div>
+      <div class="eyebrow">Medication &amp; Symptom Log</div>
+      <div class="title">Weekly<br>Symptom Tracker</div>
+      <div class="subtitle">Rate each symptom 1 (low) to 5 (high). Fill one row per day.</div>
+    </div>
+    <div class="sym-card">
+      <div class="sec-label">Symptom check-in — fill one dot per day per symptom</div>
+      <div class="sym-header"><div></div><div class="dh">Mon</div><div class="dh">Tue</div><div class="dh">Wed</div><div class="dh">Thu</div><div class="dh">Fri</div><div class="dh">Sat</div><div class="dh">Sun</div></div>
+      <div class="srow"><div class="slbl">Focus</div><div class="scell"><div class="sdots"><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div></div></div><div class="scell"><div class="sdots"><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div></div></div><div class="scell"><div class="sdots"><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div></div></div><div class="scell"><div class="sdots"><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div></div></div><div class="scell"><div class="sdots"><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div></div></div><div class="scell"><div class="sdots"><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div></div></div><div class="scell"><div class="sdots"><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div></div></div></div><div class="srow"><div class="slbl">Energy</div><div class="scell"><div class="sdots"><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div></div></div><div class="scell"><div class="sdots"><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div></div></div><div class="scell"><div class="sdots"><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div></div></div><div class="scell"><div class="sdots"><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div></div></div><div class="scell"><div class="sdots"><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div></div></div><div class="scell"><div class="sdots"><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div></div></div><div class="scell"><div class="sdots"><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div></div></div></div><div class="srow"><div class="slbl">Anxiety</div><div class="scell"><div class="sdots"><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div></div></div><div class="scell"><div class="sdots"><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div></div></div><div class="scell"><div class="sdots"><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div></div></div><div class="scell"><div class="sdots"><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div></div></div><div class="scell"><div class="sdots"><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div></div></div><div class="scell"><div class="sdots"><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div></div></div><div class="scell"><div class="sdots"><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div></div></div></div><div class="srow"><div class="slbl">Sleep quality</div><div class="scell"><div class="sdots"><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div></div></div><div class="scell"><div class="sdots"><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div></div></div><div class="scell"><div class="sdots"><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div></div></div><div class="scell"><div class="sdots"><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div></div></div><div class="scell"><div class="sdots"><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div></div></div><div class="scell"><div class="sdots"><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div></div></div><div class="scell"><div class="sdots"><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div></div></div></div><div class="srow"><div class="slbl">Mood overall</div><div class="scell"><div class="sdots"><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div></div></div><div class="scell"><div class="sdots"><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div></div></div><div class="scell"><div class="sdots"><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div></div></div><div class="scell"><div class="sdots"><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div></div></div><div class="scell"><div class="sdots"><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div></div></div><div class="scell"><div class="sdots"><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div></div></div><div class="scell"><div class="sdots"><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div><div class="sd"></div></div></div></div>
+    </div>
+    <div class="mood-card">
+      <div class="sec-label" style="color:#2AA8AE">Overall mood this week — color in each day block</div>
+      <div class="mood-week">
+        <div class='mday'><div class='mday-lbl'>Mo</div><div class='mday-box'></div></div><div class='mday'><div class='mday-lbl'>Tu</div><div class='mday-box'></div></div><div class='mday'><div class='mday-lbl'>We</div><div class='mday-box'></div></div><div class='mday'><div class='mday-lbl'>Th</div><div class='mday-box'></div></div><div class='mday'><div class='mday-lbl'>Fr</div><div class='mday-box'></div></div><div class='mday'><div class='mday-lbl'>Sa</div><div class='mday-box'></div></div><div class='mday'><div class='mday-lbl'>Su</div><div class='mday-box'></div></div>
+      </div>
+    </div>
+    <div class="pattern-card">
+      <div class="sec-label">Patterns I'm noticing</div>
+      <div class="plines"><div class="pline"></div><div class="pline"></div><div class="pline"></div><div class="pline"></div></div>
+    </div>
+
+  </div>
+  <div class="page-num">03</div>
+</div>
+</body>
+</html>
