@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1404">
+<title>ADHD Brain OS — Back Cover</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=Caveat:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1404px;height:1872px;overflow:hidden;background:#7B9E87}
+.page{width:1404px;height:1872px;background:#7B9E87;position:relative;overflow:hidden}
+/* Same atmospheric circles as cover */
+.page::before{content:'';position:absolute;inset:0;background-image:radial-gradient(ellipse at 20% 20%,rgba(61,97,72,.25) 0%,transparent 60%),radial-gradient(ellipse at 80% 80%,rgba(28,47,34,.2) 0%,transparent 55%);z-index:0}
+.bg-circle{position:absolute;border-radius:50%;border:1px solid rgba(237,243,239,.1)}
+.c1{width:900px;height:900px;top:-180px;right:-200px}
+.c2{width:600px;height:600px;bottom:-100px;left:-100px;border-width:.5px}
+.corner-tl{position:absolute;top:56px;left:56px;width:36px;height:36px;border-top:1px solid rgba(246,243,238,.18);border-left:1px solid rgba(246,243,238,.18);z-index:1}
+.corner-br{position:absolute;bottom:56px;right:56px;width:36px;height:36px;border-bottom:1px solid rgba(246,243,238,.18);border-right:1px solid rgba(246,243,238,.18);z-index:1}
+.content{position:absolute;inset:0;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 120px}
+.main-statement{font-family:'Cormorant Garamond',serif;font-size:120px;font-weight:300;font-style:italic;color:#F6F3EE;line-height:.9;margin-bottom:32px}
+.sub-statement{font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:300;color:rgba(246,243,238,.6);line-height:1.2;margin-bottom:48px}
+.divider{width:80px;height:1px;background:rgba(246,243,238,.25);margin:0 auto 48px}
+.tagline{font-family:'DM Sans',sans-serif;font-size:20px;font-weight:300;color:rgba(246,243,238,.45);letter-spacing:.12em;text-transform:uppercase;margin-bottom:16px}
+.shop-name{font-family:'Caveat',cursive;font-size:32px;color:rgba(246,243,238,.55);margin-bottom:48px}
+.social-note{font-family:'DM Sans',sans-serif;font-size:18px;font-weight:300;color:rgba(246,243,238,.35);margin-bottom:8px}
+.social-handle{font-family:'DM Sans',sans-serif;font-size:18px;font-weight:500;color:rgba(246,243,238,.45);letter-spacing:.06em}
+.star-row{display:flex;gap:12px;justify-content:center;margin-top:48px}
+.star{font-size:18px;color:rgba(246,243,238,.2)}
+</style>
+</head>
+<body>
+<div class="page" data-document-role="page" data-label="Back Cover">
+  <div class="bg-circle c1"></div>
+  <div class="bg-circle c2"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div class="main-statement">You<br>showed up.</div>
+    <div class="sub-statement">That's everything.</div>
+    <div class="divider"></div>
+    <div class="tagline">ADHD Brain OS · Complete Planning System</div>
+    <div class="shop-name">designed for the way your brain actually works</div>
+    <div class="social-note">Share your setup and tag us</div>
+    <div class="social-handle">@brainosplanner</div>
+    <div class="star-row">
+      <div class="star">✦</div>
+      <div class="star">✦</div>
+      <div class="star">✦</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

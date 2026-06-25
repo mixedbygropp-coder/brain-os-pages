@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1404">
+<title>ADHD Brain OS — Where Do I Even Start</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=Caveat:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1404px;height:1872px;overflow:hidden;background:#F6F3EE}
+.page{width:1404px;height:1872px;background:#F6F3EE;position:relative;font-family:'DM Sans',sans-serif}
+.chapter-tab{position:absolute;left:0;top:220px;width:8px;height:80px;background:#C97B52;border-radius:0 4px 4px 0}
+.page-num{position:absolute;bottom:56px;left:50%;transform:translateX(-50%);font-size:18px;font-weight:300;color:#7A8278;letter-spacing:.12em}
+.corner-tl{position:absolute;top:56px;left:56px;width:36px;height:36px;border-top:1px solid #DDD8D0;border-left:1px solid #DDD8D0}
+.corner-br{position:absolute;bottom:56px;right:56px;width:36px;height:36px;border-bottom:1px solid #DDD8D0;border-right:1px solid #DDD8D0}
+.content{position:absolute;top:100px;left:90px;right:90px;bottom:90px;display:flex;flex-direction:column}
+.eyebrow{font-size:16px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#C97B52;margin-bottom:10px}
+.title{font-family:'Cormorant Garamond',serif;font-size:64px;font-weight:300;font-style:italic;color:#1A1F1C;line-height:.95;margin-bottom:10px}
+.subtitle{font-size:20px;font-weight:300;color:#7A8278;margin-bottom:28px}
+/* Flowchart */
+.flow{display:flex;flex-direction:column;align-items:center;gap:0;flex:1}
+.flow-node{display:flex;align-items:center;gap:0;width:100%}
+.node-box{border-radius:16px;padding:20px 28px;text-align:center;flex-shrink:0}
+.node-question{background:#1A1F1C;color:#F6F3EE;font-size:22px;font-weight:500;min-width:380px}
+.node-yes{background:#EDF3EF;color:#3D6148;font-size:18px;font-weight:400;min-width:280px;border:1.5px solid #C5D9CC}
+.node-no{background:#FAE8DC;color:#7A3A1A;font-size:18px;font-weight:400;min-width:280px;border:1.5px solid #F0C9B0}
+.node-action{background:#3D6148;color:white;font-size:18px;font-weight:400;min-width:280px;border-radius:12px;padding:16px 24px;text-align:center}
+.node-action.orange{background:#C97B52}
+.flow-arrow{font-size:22px;color:#DDD8D0;text-align:center;margin:8px 0;width:100%;text-align:center}
+.flow-branch{display:grid;grid-template-columns:1fr auto 1fr;gap:20px;width:100%;align-items:start;margin:8px 0}
+.branch-label{font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#DDD8D0;text-align:center;margin-bottom:8px}
+.branch-arrow{font-size:20px;color:#DDD8D0;text-align:center;margin:8px 0}
+.center-line{display:flex;flex-direction:column;align-items:center;padding-top:28px}
+.center-divider{width:1px;height:40px;background:#DDD8D0}
+.branch-side{display:flex;flex-direction:column;align-items:center;gap:8px}
+/* Bottom tip */
+.tip{background:#EDF3EF;border-radius:14px;padding:24px 32px;display:flex;align-items:center;gap:16px;margin-top:20px}
+.tip-icon{font-size:28px;flex-shrink:0}
+.tip-text{font-size:18px;font-weight:300;color:#3D6148;line-height:1.5}
+</style>
+</head>
+<body>
+<div class="page" data-document-role="page" data-label="Where Do I Even Start Flowchart">
+  <div class="chapter-tab"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+    <div>
+      <div class="eyebrow">Focus Toolkit</div>
+      <div class="title">Where Do I<br>Even Start?</div>
+      <div class="subtitle">Follow the path. It ends somewhere actionable. It always does.</div>
+    </div>
+
+    <div class="flow">
+      <!-- Node 1 -->
+      <div style="display:flex;justify-content:center;width:100%">
+        <div class="node-box node-question">Do you know what you need to do?</div>
+      </div>
+      <div class="flow-arrow">↓</div>
+
+      <!-- Branch 1 -->
+      <div class="flow-branch">
+        <div class="branch-side">
+          <div class="branch-label">No</div>
+          <div class="node-box node-no" style="width:100%;text-align:center">Open brain dump page → write everything swirling in your head → pick one thing</div>
+        </div>
+        <div class="center-line">
+          <div style="font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#DDD8D0">Yes</div>
+          <div class="center-divider"></div>
+        </div>
+        <div class="branch-side">
+          <div class="branch-label" style="visibility:hidden">pad</div>
+          <div class="node-box node-question" style="min-width:0;width:100%;text-align:center;font-size:20px">Do you know how to start it?</div>
+        </div>
+      </div>
+      <div class="flow-arrow" style="text-align:right;padding-right:180px">↓</div>
+
+      <!-- Branch 2 -->
+      <div class="flow-branch">
+        <div class="branch-side" style="visibility:hidden"><div class="node-box node-yes">placeholder</div></div>
+        <div class="center-line" style="visibility:hidden"><div class="center-divider"></div></div>
+        <div class="branch-side">
+          <div class="flow-branch" style="grid-template-columns:1fr auto 1fr">
+            <div class="branch-side">
+              <div class="branch-label">No</div>
+              <div class="node-box node-no" style="width:100%;text-align:center;font-size:16px">Use task breakdown page → find your first physical action</div>
+            </div>
+            <div class="center-line">
+              <div style="font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#DDD8D0">Yes</div>
+              <div class="center-divider"></div>
+            </div>
+            <div class="branch-side">
+              <div class="branch-label" style="visibility:hidden">pad</div>
+              <div class="node-box node-question" style="min-width:0;width:100%;text-align:center;font-size:18px">Does it feel too big?</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flow-arrow" style="text-align:right;padding-right:20px">↓</div>
+
+      <!-- Final branch -->
+      <div class="flow-branch" style="grid-template-columns:1fr 1fr">
+        <div class="branch-side">
+          <div class="branch-label">Yes — too big</div>
+          <div class="node-box node-action orange" style="width:100%;text-align:center">Set a 10-minute timer. Do anything on the task for 10 minutes only. Stop when it rings.</div>
+        </div>
+        <div class="branch-side">
+          <div class="branch-label">No — I can do it</div>
+          <div class="node-box node-action" style="width:100%;text-align:center">Close everything else. Open only what you need. Set a Pomodoro. Start the first sentence / first click / first line.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tip">
+      <div class="tip-icon">💡</div>
+      <div class="tip-text">You will always get stuck at the same nodes. That's useful data — not a character flaw. Note which question trips you up and plan for it next time.</div>
+    </div>
+  </div>
+  <div class="page-num">14</div>
+</div>
+</body>
+</html>
