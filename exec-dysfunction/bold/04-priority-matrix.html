@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1404">
+<title>Executive Dysfunction Workbook — Priority Matrix — Bold Theme</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=Caveat:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1404px;height:1872px;overflow:hidden;background:#FAFAFA}
+.page{width:1404px;height:1872px;background:#FAFAFA;position:relative;font-family:'DM Sans', sans-serif}
+.chapter-tab{position:absolute;left:0;top:220px;width:8px;height:80px;background:#7C3AED;border-radius:0 4px 4px 0}
+.page-num{position:absolute;bottom:56px;left:50%;transform:translateX(-50%);font-size:18px;font-weight:300;color:#64748B;letter-spacing:.12em}
+.corner-tl{position:absolute;top:56px;left:56px;width:36px;height:36px;border-top:1px solid #E2E8F0;border-left:1px solid #E2E8F0}
+.corner-br{position:absolute;bottom:56px;right:56px;width:36px;height:36px;border-bottom:1px solid #E2E8F0;border-right:1px solid #E2E8F0}
+.content{position:absolute;top:100px;left:90px;right:90px;bottom:90px;display:flex;flex-direction:column}
+.eyebrow{font-size:16px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#7C3AED;margin-bottom:10px}
+.title{font-family:'Cormorant Garamond', serif;font-size:72px;font-weight:300;font-style:italic;color:#111111;line-height:.95;margin-bottom:10px}
+.subtitle{font-size:20px;font-weight:300;color:#64748B;margin-bottom:20px;line-height:1.5}
+.sec-label{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#7C3AED;margin-bottom:12px}
+.card{background:#FFFFFF;border:0.5px solid #E2E8F0;border-radius:16px;padding:28px 32px}
+.card-accent{background:#F5F3FF;border:0.5px solid #DDD6FE;border-radius:16px;padding:28px 32px}
+.card-dark{background:#111111;border-radius:16px;padding:28px 32px}
+.fill-line{height:1px;background:#F8FAFC;margin-bottom:18px}
+.fill-line:last-child{margin-bottom:0}
+
+.warn-box{background:#FFF7ED;border-radius:12px;padding:14px 22px;display:flex;gap:12px;align-items:center;font-size:17px;font-weight:300;color:#9A3412;margin-bottom:16px}
+.corner-lbls{display:grid;grid-template-columns:1fr 1fr;text-align:center;margin-bottom:6px}
+.clbl{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#E2E8F0}
+.matrix{display:grid;grid-template-columns:1fr 1fr;gap:12px;flex:1}
+.q{border-radius:14px;padding:24px 28px;display:flex;flex-direction:column}
+.q1{background:#F5F3FF;border:1.5px solid #DDD6FE}
+.q2{background:#FEFCE8;border:1.5px solid #F0DDA8}
+.q3{background:#FFF7ED;border:1.5px solid #E2E8F0}
+.q4{background:#F8FAFC;border:0.5px solid #E2E8F0}
+.qh{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.qi{font-size:28px}
+.qt{font-family:'Cormorant Garamond', serif;font-size:28px;font-weight:600;color:#111111}
+.qs{font-size:13px;font-weight:300;color:#64748B}
+.qlines{display:flex;flex-direction:column;gap:14px}
+.ql{height:1px;background:rgba(0,0,0,.07)}
+
+</style>
+</head>
+<body>
+<div class="page" data-document-role="page">
+  <div class="chapter-tab"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+  <div class="content">
+
+    <div>
+      <div class="eyebrow">Executive Dysfunction Workbook</div>
+      <div class="title">Priority<br>Matrix</div>
+      <div class="subtitle">Sort before you start. Not everything that feels urgent actually is.</div>
+    </div>
+    <div class="warn-box"><span>⚠️</span><span>ADHD brains feel everything as urgent. Pause and ask: <strong>is there actually a deadline, or does it just feel that way?</strong></span></div>
+    <div class="corner-lbls"><div class="clbl">← Urgent</div><div class="clbl">Not Urgent →</div></div>
+    <div class="matrix">
+      <div class="q q1"><div class="qh"><div class="qi">🔥</div><div><div class="qt">Do Now</div><div class="qs">Urgent + Important</div></div></div><div class="qlines"><div class='ql'></div><div class='ql'></div><div class='ql'></div><div class='ql'></div><div class='ql'></div><div class='ql'></div></div></div>
+      <div class="q q2"><div class="qh"><div class="qi">📅</div><div><div class="qt">Schedule It</div><div class="qs">Not Urgent + Important</div></div></div><div class="qlines"><div class='ql'></div><div class='ql'></div><div class='ql'></div><div class='ql'></div><div class='ql'></div><div class='ql'></div></div></div>
+      <div class="q q3"><div class="qh"><div class="qi">🤝</div><div><div class="qt">Delegate</div><div class="qs">Urgent + Not Important</div></div></div><div class="qlines"><div class='ql'></div><div class='ql'></div><div class='ql'></div><div class='ql'></div><div class='ql'></div><div class='ql'></div></div></div>
+      <div class="q q4"><div class="qh"><div class="qi">🍃</div><div><div class="qt">Let It Go</div><div class="qs">Not Urgent + Not Important</div></div></div><div class="qlines"><div class='ql'></div><div class='ql'></div><div class='ql'></div><div class='ql'></div><div class='ql'></div><div class='ql'></div></div></div>
+    </div>
+
+  </div>
+  <div class="page-num">04</div>
+</div>
+</body>
+</html>
